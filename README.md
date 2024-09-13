@@ -29,3 +29,4 @@ To learn more about the Medicare, take a look at the following resources:
 
 - [Documentation](https://docs.google.com/document/d/1TpuNG_qOhtjpG9_ikeCoJXuXfwD3O3jVZjzM_m29mI0/edit) - learn more about this project.
 - [Project Requrieemnt](https://docs.google.com/document/d/1EkVCGkZEgFTMxQ55yoUJ-c5VGBALlDFFuPrbtzaijNg/edit) - know more about the project requirements.
+- [Github working policy](https://docs.google.com/document/d/1xzQKDDQD91LphiGHFylG1QZ6AlHzibFdkbVqqVERk-4/edit) - know more about how to branches, push, pull or merge the code.
