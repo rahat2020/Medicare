@@ -29,5 +29,3 @@ To learn more about the Medicare, take a look at the following resources:
 
 - [Documentation](https://docs.google.com/document/d/1TpuNG_qOhtjpG9_ikeCoJXuXfwD3O3jVZjzM_m29mI0/edit) - learn more about this project.
 - [Project Requrieemnt](https://docs.google.com/document/d/1EkVCGkZEgFTMxQ55yoUJ-c5VGBALlDFFuPrbtzaijNg/edit) - know more about the project requirements.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
