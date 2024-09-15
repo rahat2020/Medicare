@@ -1,4 +1,4 @@
-## To Start the project:
+## To start the project:
 
 To install the project in your machine please follow these are steps:
 
