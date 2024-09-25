@@ -11,7 +11,7 @@ import Footer from '@/components/Home/Footer';
 
 const Home = () => {
   return (
-    <div className='h-screen flex flex-col justify-center items-center'>
+    <div className=''>
         <Topbar/>
         <Header/>
         <Doctors/>
