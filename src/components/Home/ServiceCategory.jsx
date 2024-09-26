@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServiceCategory = () => {
   return (
-    <div>ServiceCategory</div>
+    <div>ServiceCategory Specialities</div>
   )
 }
 
