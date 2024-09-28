@@ -10,7 +10,7 @@ const Header = () => {
       <div className="md:w-1/2 flex flex-col justify-center">
         <div className="space-y-6">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-            Consult <span className="text-blue-600">Best Doctors</span> Your
+            Consult <span className="text-blue-500">Best Doctors</span> Your
             Nearby Location
           </h1>
           <p className="text-gray-500 text-lg">
@@ -40,7 +40,7 @@ const Header = () => {
             placeholder="Search doctors, clinics, etc."
             className="outline-none px-4 py-3 w-full text-gray-600"
           />
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-full flex items-center space-x-1">
+          <button className="bg-blue-500 text-white px-6 py-3 rounded-full flex items-center space-x-1">
             <Search />
             <span>Search</span>
           </button>
