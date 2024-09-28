@@ -5,11 +5,11 @@ import { ArrowRight, CheckSquare, ChevronDown, Search } from "react-feather";
 
 const Header = () => {
   return (
-    <div className="px-4 md:px-6 flex flex-col md:flex-row items-center justify-between rounded-lg relative overflow-hidden h-screen">
+    <div className="md:h-screen px-4 md:px-6 flex flex-col md:flex-row items-center justify-between rounded-lg relative overflow-hidden ">
       {/* Left Section */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <div className="space-y-6">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Consult <span className="text-blue-600">Best Doctors</span> Your
             Nearby Location
           </h1>
@@ -61,17 +61,17 @@ const Header = () => {
         </div>
 
         {/* Check Up Card with Floating Animation */}
-        <div className="absolute top-1/2 left-0 bg-white p-4 rounded-lg border shadow-md flex items-center gap-4 animate-float-item-one">
+        <div className="absolute top-1/2 left-0 bg-white p-2 lg:p-4 rounded-lg border shadow-md flex items-center gap-4 animate-float-item-one">
           {/* Checkbox Section */}
           <div className="flex items-center gap-2 text-blue-600">
             <CheckSquare size={20} />
-            <p className="text-gray-500">Regular Checkup</p>
+            <p className="text-gray-500 text-14 lg:text-16">Regular Checkup</p>
           </div>
         </div>
 
         {/* Floating Doctor Card with Animation */}
-        <div className="absolute top-1/4 right-0 bg-white p-3 border rounded-lg shadow-md flex flex-col text-center items-center gap-4 animate-float-item-two">
-          <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-md relative">
+        <div className="absolute top-4 lg:top-1/4 -right-8 md:right-0 bg-white p-2 lg:p-3 border rounded-lg shadow-md flex flex-col text-center items-center gap-4 animate-float-item-two">
+          <div className="w-12 lg:w-14 h-12 lg:h-14 rounded-full overflow-hidden border-2 border-white shadow-md relative">
             <Image
               src="https://media.istockphoto.com/id/1434687410/photo/portrait-of-happy-and-successful-african-american-doctor-man-working-inside-office-clinic.jpg?s=612x612&w=0&k=20&c=kKvUmzkotN3FrWTGgS3ar2mm4SLwlV3cbiNC-Bp12YI="
               alt="Doctor Avatar"
