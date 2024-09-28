@@ -91,7 +91,7 @@ const Header = () => {
         </div>
 
         {/* Meet Our Doctors Section with Floating Animation */}
-        <div className="absolute bottom-0 right-0 bg-white p-5 border rounded-lg shadow-md flex flex-col text-center items-center gap-2 mt-5 animate-float-item-one">
+        <div className="absolute bottom-0 right-0 bg-white p-3 md:p-5 border rounded-lg shadow-md flex flex-col text-center items-center gap-2 mt-5 animate-float-item-one">
           <p className="font-semibold text-gray-800">Meet Our Doctors</p>
           <div className="flex -space-x-1">
             <img
