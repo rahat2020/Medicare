@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { Menu, X, User, Lock, ChevronDown } from "react-feather";
+import { Menu, X, User, Lock, ChevronDown, AlignRight } from "react-feather";
 
 const Topbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,28 +27,28 @@ const Topbar = () => {
           <div className="bg-white w-48 py-2 opacity-0 -mt-4"></div>
           <Link
             href="/about"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             About Us
           </Link>
           <hr />
           <Link
             href="/services"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             Services
           </Link>
           <hr />
           <Link
             href="/serviceDetails"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             Service Details
           </Link>
           <hr />
           <Link
             href="/faq"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             FAQ
           </Link>
@@ -65,28 +65,28 @@ const Topbar = () => {
           <div className="bg-white w-48 py-2 opacity-0 -mt-4"></div>
           <Link
             href="/cardiologist"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             Cardiologist
           </Link>
           <hr />
           <Link
             href="/neurology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             Neurology
           </Link>
           <hr />
           <Link
             href="/ophthalmology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             Ophthalmology
           </Link>
           <hr />
           <Link
             href="/urology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
           >
             Urology
           </Link>
@@ -227,10 +227,10 @@ const Topbar = () => {
         <div className="flex gap-4 items-center">
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-3xl text-blue-600"
+            className="md:hidden text-5xl text-blue-600"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X /> : <Menu />}
+            {isMobileMenuOpen ? <X /> : <AlignRight />}
           </button>
 
           {/* Logo */}
