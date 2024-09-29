@@ -227,14 +227,14 @@ const Topbar = () => {
         <div className="flex gap-4 items-center">
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-5xl text-blue-600"
+            className="md:hidden text-5xl text-blue-500"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <AlignRight />}
           </button>
 
           {/* Logo */}
-          <div className="text-3xl font-bold text-blue-600">
+          <div className="text-3xl font-bold text-blue-500">
             <Link href="/">Medicare</Link>
           </div>
         </div>
@@ -248,13 +248,13 @@ const Topbar = () => {
         <div className="hidden md:flex items-center space-x-2 md:space-x-4">
           <Link
             href="/signUp"
-            className="hover:bg-blue-600 hover:text-white px-2 lg:px-4 py-1 lg:py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
+            className="hover:bg-blue-500 hover:text-white px-2 lg:px-4 py-1 lg:py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
           >
             <User /> Register
           </Link>
           <Link
             href="/login"
-            className="bg-blue-600 text-white hover:bg-white hover:text-blue-600 px-2 lg:px-4 py-1 lg:py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
+            className="bg-blue-500 text-white hover:bg-white hover:text-blue-500 px-2 lg:px-4 py-1 lg:py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
           >
             <Lock className="font-extra-bold text-sm md:text-16" /> Login
           </Link>
@@ -270,13 +270,13 @@ const Topbar = () => {
           <div className="flex flex-col space-y-2">
             <Link
               href="/signUp"
-              className="hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
+              className="hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
             >
               <User /> Register
             </Link>
             <Link
               href="/login"
-              className="bg-blue-600 text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
+              className="bg-blue-500 text-white hover:bg-white hover:text-blue-600 px-4 py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
             >
               <Lock className="font-extra-bold text-16" /> Login
             </Link>
