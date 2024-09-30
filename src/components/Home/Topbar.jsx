@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Menu, X, User, Lock, ChevronDown, AlignRight } from "react-feather";
+import { navData } from "@/utils/UI/navData";
 
 const Topbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -10,214 +11,82 @@ const Topbar = () => {
 
   const links = (
     <>
-      <Link href="/" className="hover:text-blue-600 flex gap-1 items-center">
-        Home
-      </Link>
+      {navData.map((item, index) => (
+        <div key={index} className="relative group">
+          <Link
+            href={item.href}
+            className="hover:text-blue-600 flex gap-1 items-center"
+          >
+            {item.label}{" "}
+            {item.icon && <span className="ml-1">{item.icon}</span>}
+          </Link>
 
-      <div className="relative group">
-        <Link
-          href={"#"}
-          className="hover:text-blue-600 flex gap-1 items-center"
-        >
-          Pages <ChevronDown />
-        </Link>
-
-        {/* Dropdown */}
-        <div className="w-48 absolute left-0 top-6 mt-1 border rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out hidden group-hover:block bg-white shadow-lg z-10">
-          <div className="bg-white w-48 py-2 opacity-0 -mt-4"></div>
-          <Link
-            href="/about"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            About Us
-          </Link>
-          <hr />
-          <Link
-            href="/services"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            Services
-          </Link>
-          <hr />
-          <Link
-            href="/serviceDetails"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            Service Details
-          </Link>
-          <hr />
-          <Link
-            href="/faq"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            FAQ
-          </Link>
+          {item.dropdown && (
+            <div className="w-48 absolute left-0 top-6 mt-1 border rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out hidden group-hover:block bg-white shadow-lg z-10">
+              <div className="bg-white w-48 py-2 opacity-0 -mt-4"></div>
+              {item.dropdown.map((dropdownItem, idx) => (
+                <div key={idx}>
+                  <Link
+                    href={dropdownItem.href}
+                    className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
+                  >
+                    {dropdownItem.label}
+                  </Link>
+                  {idx < item.dropdown.length - 1 && <hr />}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-      </div>
-
-      <div className="relative group">
-        <Link href="#" className="hover:text-blue-600 flex gap-1 items-center">
-          Specialties <ChevronDown />
-        </Link>
-
-        {/* Dropdown */}
-        <div className="w-48 absolute left-0 top-6 mt-1 border rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out hidden group-hover:block bg-white shadow-lg z-10">
-          <div className="bg-white w-48 py-2 opacity-0 -mt-4"></div>
-          <Link
-            href="/cardiologist"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            Cardiologist
-          </Link>
-          <hr />
-          <Link
-            href="/neurology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            Neurology
-          </Link>
-          <hr />
-          <Link
-            href="/ophthalmology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            Ophthalmology
-          </Link>
-          <hr />
-          <Link
-            href="/urology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300 hover:px-6"
-          >
-            Urology
-          </Link>
-        </div>
-      </div>
-
-      <Link
-        href="/doctors"
-        className="hover:text-blue-600 flex gap-1 items-center"
-      >
-        Doctors
-      </Link>
-      <Link
-        href="/blog"
-        className="hover:text-blue-600 flex gap-1 items-center"
-      >
-        Blog
-      </Link>
-      <Link
-        href="/contact"
-        className="hover:text-blue-600 flex gap-1 items-center"
-      >
-        Contact Us
-      </Link>
+      ))}
     </>
   );
+
   const smallDeviceLinks = (
     <>
-      <Link href="/" className="hover:text-blue-600 flex gap-1 items-center">
-        Home
-      </Link>
 
-      <div className="relative">
-        <Link
-          href={"#"}
-          onClick={() => setPagesDropdownOpen(!pagesDropdownOpen)}
-          className="hover:text-blue-600 flex gap-1 items-center"
-        >
-          Pages <ChevronDown />
-        </Link>
+      {navData?.map((item, index) => (
+        <div className="relative">
+          <Link
+            href={item?.href}
+            onClick={() => {
+              if (item.dropdown) {
+                if (item.label === "Pages") {
+                  setPagesDropdownOpen(!pagesDropdownOpen);
+                } else if (item.label === "Specialties") {
+                  setSpeDropdownOpen(!speDropdownOpen);
+                }
+              }
+            }}
+            className="hover:text-blue-600 flex gap-1 items-center"
+          >
+            {item.label} {item?.icon}
+          </Link>
 
-        {/* Dropdown */}
-        {
-        pagesDropdownOpen && <div className="w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white shadow-lg z-10">
-          <Link
-            href="/about"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            About Us
-          </Link>
-          <hr />
-          <Link
-            href="/services"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            Services
-          </Link>
-          <hr />
-          <Link
-            href="/serviceDetails"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            Service Details
-          </Link>
-          <hr />
-          <Link
-            href="/faq"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            FAQ
-          </Link>
+          {/* Dropdown */}
+          {item?.dropdown && (
+            <div
+              className={`w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white z-10 ${
+                (item.label === "Pages" && pagesDropdownOpen) ||
+                (item.label === "Specialties" && speDropdownOpen)
+                  ? "block"
+                  : "hidden"
+              }`}
+            >
+              {item?.dropdown?.map((dropdownItem, idx) => <div key={idx}>
+              <Link
+                href={dropdownItem?.href}
+                className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+              >
+                {dropdownItem?.label}
+              </Link>
+              {idx < item.dropdown.length - 1 && <hr />}
+              </div>
+              )}
+            </div>
+          )}
         </div>
-        }
-      </div>
-
-      <div className="relative">
-        <Link onClick={()=> setSpeDropdownOpen(!speDropdownOpen)} href="#" className="hover:text-blue-600 flex gap-1 items-center">
-          Specialties <ChevronDown />
-        </Link>
-
-        {/* Dropdown */}
-        {speDropdownOpen && <div className="w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white shadow-lg z-10">
-          <div className="bg-white w-48 py-2 opacity-0 -mt-4"></div>
-          <Link
-            href="/cardiologist"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            Cardiologist
-          </Link>
-          <hr />
-          <Link
-            href="/neurology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            Neurology
-          </Link>
-          <hr />
-          <Link
-            href="/ophthalmology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            Ophthalmology
-          </Link>
-          <hr />
-          <Link
-            href="/urology"
-            className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-          >
-            Urology
-          </Link>
-        </div>}
-      </div>
-
-      <Link
-        href="/doctors"
-        className="hover:text-blue-600 flex gap-1 items-center"
-      >
-        Doctors
-      </Link>
-      <Link
-        href="/blog"
-        className="hover:text-blue-600 flex gap-1 items-center"
-      >
-        Blog
-      </Link>
-      <Link
-        href="/contact"
-        className="hover:text-blue-600 flex gap-1 items-center"
-      >
-        Contact Us
-      </Link>
+      ))}
     </>
   );
 
