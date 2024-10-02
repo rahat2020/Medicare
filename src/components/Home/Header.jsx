@@ -52,7 +52,7 @@ const Header = () => {
         {/* Doctor Image */}
         <div className="relative w-full h-auto md:w-3/4 md:h-auto">
           <Image
-            src="https://media.istockphoto.com/id/177373093/photo/indian-male-doctor.jpg?s=612x612&w=0&k=20&c=5FkfKdCYERkAg65cQtdqeO_D0JMv6vrEdPw3mX1Lkfg="
+            src="/doctor_image.jpg"
             alt="Doctor"
             width={500}
             height={600}
@@ -62,6 +62,7 @@ const Header = () => {
 
         {/* Check Up Card with Floating Animation */}
         <div className="absolute top-1/2 left-0 bg-white p-2 lg:p-4 rounded-lg border shadow-md flex items-center gap-4 animate-float-item-one">
+          
           {/* Checkbox Section */}
           <div className="flex items-center gap-2 text-blue-600">
             <CheckSquare size={20} />
@@ -73,7 +74,7 @@ const Header = () => {
         <div className="absolute top-4 lg:top-1/4 -right-8 md:right-0 bg-white p-2 lg:p-3 border rounded-lg shadow-md flex flex-col text-center items-center gap-4 animate-float-item-two">
           <div className="w-12 lg:w-14 h-12 lg:h-14 rounded-full overflow-hidden border-2 border-white shadow-md relative">
             <Image
-              src="https://media.istockphoto.com/id/1434687410/photo/portrait-of-happy-and-successful-african-american-doctor-man-working-inside-office-clinic.jpg?s=612x612&w=0&k=20&c=kKvUmzkotN3FrWTGgS3ar2mm4SLwlV3cbiNC-Bp12YI="
+              src="/doc_jhon.jpg"
               alt="Doctor Avatar"
               layout="fill"
               objectFit="cover"
@@ -95,22 +96,22 @@ const Header = () => {
           <p className="font-semibold text-gray-800">Meet Our Doctors</p>
           <div className="flex -space-x-1">
             <img
-              src="https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.jpg?s=612x612&w=0&k=20&c=49wqOwwuonk9f8NACL7M_5RosqQPFwJ8-dpmeo9AvQw="
+              src="/doc_meet_1.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
-              alt="Doctor 2"
+              alt="Doctor 0"
             />
             <img
-              src="https://media.istockphoto.com/id/1270790502/photo/medical-concept-of-indian-beautiful-female-doctor-with-note-book.jpg?s=612x612&w=0&k=20&c=5r5tCLSnYHKiPNaHn4hu-e4u_-3eat_8PRdmEQgkmVM="
+              src="/doc_meet_2.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 1"
             />
             <img
-              src="https://media.istockphoto.com/id/1327024466/photo/portrait-of-male-doctor-in-white-coat-and-stethoscope-standing-in-clinic-hall.jpg?s=612x612&w=0&k=20&c=49wqOwwuonk9f8NACL7M_5RosqQPFwJ8-dpmeo9AvQw="
+              src="/doc_meet_1.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 2"
             />
             <img
-              src="https://media.istockphoto.com/id/488119238/photo/portrait-of-a-doctor-smiling.jpg?s=612x612&w=0&k=20&c=11dBh4bti6qDbAkiCsollQxO7u3k8q3VuiynwlUj2II="
+              src="/doc_meet_3.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 3"
             />
