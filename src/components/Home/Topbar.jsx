@@ -46,7 +46,7 @@ const Topbar = () => {
     <>
 
       {navData?.map((item, index) => (
-        <div className="relative">
+        <div key={index} className="relative">
           <Link
             href={item?.href}
             onClick={() => {

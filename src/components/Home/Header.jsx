@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { ArrowRight, CheckSquare, ChevronDown, Search } from "react-feather";
 
@@ -96,22 +95,22 @@ const Header = () => {
         <div className="absolute bottom-0 right-0 bg-white p-3 md:p-5 border rounded-lg shadow-md flex flex-col text-center items-center gap-2 mt-5 animate-float-item-one">
           <p className="font-semibold text-gray-800">Meet Our Doctors</p>
           <div className="flex -space-x-1">
-            <img
+            <Image
               src="/doc_meet_1.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 0"
             />
-            <img
+            <Image
               src="/doc_meet_2.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 1"
             />
-            <img
+            <Image
               src="/doc_meet_1.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 2"
             />
-            <img
+            <Image
               src="/doc_meet_3.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 3"
