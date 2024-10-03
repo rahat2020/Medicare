@@ -99,10 +99,7 @@ const Faq = () => {
                 </div>
 
                 {openIndex === index && (
-                  <div className="mt-3">
-                    <hr className="mb-3" />
-                    <p className=" text-gray-600 duration-300">{faq.answer}</p>
-                  </div>
+                    <p className="mt-3 text-gray-600 duration-300">{faq.answer}</p>
                 )}
               </div>
             ))}
