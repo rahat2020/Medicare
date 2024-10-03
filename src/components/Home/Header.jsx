@@ -96,24 +96,32 @@ const Header = () => {
           <p className="font-semibold text-gray-800">Meet Our Doctors</p>
           <div className="flex -space-x-1">
             <Image
-              src="/doc_meet_1.jpg"
+              src="/assets/doc_meet_1.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 0"
+              width={44}
+              height={44}
             />
             <Image
-              src="/doc_meet_2.jpg"
+              src="/assets/doc_meet_2.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 1"
+              width={44}
+              height={44}
             />
             <Image
-              src="/doc_meet_1.jpg"
+              src="/assets/doc_meet_1.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 2"
+              width={44}
+              height={44}
             />
             <Image
-              src="/doc_meet_3.jpg"
+              src="/assets/doc_meet_3.jpg"
               className="w-11 h-11 rounded-full border-2 border-white object-cover"
               alt="Doctor 3"
+              width={44}
+              height={44}
             />
             <span className="bg-blue-600 text-white p-2 rounded-full text-xs">
               12k+

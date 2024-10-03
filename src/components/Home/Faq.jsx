@@ -1,4 +1,5 @@
 "use client";
+import ComponentHeader from "@/utils/UI/ComponentHeader";
 import Image from "next/image";
 import { useState } from "react";
 import { PlusCircle, MinusCircle } from "react-feather";
@@ -45,15 +46,8 @@ const Faq = () => {
 
   return (
     <section className="py-12">
-      <header className="text-center mb-16">
-      <h2 className="text-lg font-semibold text-blue-500">
-        Frequently Asked Questions
-      </h2>
-      <h3 className="text-4xl font-bold mb-6">
-        Get Your Answer<span className="text-blue-500">+</span>
-      </h3>
-      </header>
-
+      <ComponentHeader title={"Frequently Asked Questions"} desc={"Get Your Answer"}/>
+      
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Image Section */}
         <div className="relative">
