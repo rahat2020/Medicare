@@ -1,4 +1,4 @@
-import { Menu, X, User, Lock, ChevronDown, AlignRight } from "react-feather";
+import { ChevronDown } from "react-feather";
 
 export const navData = [
   {

@@ -4,6 +4,7 @@ import React from "react";
 import { ArrowRight, CheckSquare, ChevronDown, Search } from "react-feather";
 
 const Header = () => {
+
   return (
     <div className="md:h-screen px-4 md:px-6 flex flex-col md:flex-row items-center justify-between rounded-lg relative overflow-hidden ">
       {/* Left Section */}

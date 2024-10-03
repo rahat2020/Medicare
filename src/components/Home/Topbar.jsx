@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { Menu, X, User, Lock, ChevronDown, AlignRight } from "react-feather";
-import { navData } from "@/utils/UI/navData";
+import { navData } from "@/data/navData";
 
 const Topbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
