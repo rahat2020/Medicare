@@ -2,11 +2,11 @@ import React from "react";
 
 const ComponentHeader = ({title, desc}) => {
   return (
-    <header className="text-center mb-16">
+    <header style={{marginBottom: "64px"}} className="text-center">
       <h2 className="text-lg font-semibold text-blue-500">
         {title}
       </h2>
-      <h3 className="text-4xl font-bold mb-6">
+      <h3 style={{fontSize: "36px", marginBottom: "24px"}} className="font-bold">
         {desc}
       </h3>
     </header>

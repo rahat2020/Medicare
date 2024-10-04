@@ -52,7 +52,7 @@ const Header = () => {
         {/* Doctor Image */}
         <div className="relative w-full h-auto md:w-3/4 md:h-auto">
           <Image
-            src="/doctor_image.jpg"
+            src="/assets/doctor_image.jpg"
             alt="Doctor"
             width={500}
             height={600}
@@ -74,7 +74,7 @@ const Header = () => {
         <div className="absolute top-4 lg:top-1/4 -right-8 md:right-0 bg-white p-2 lg:p-3 border rounded-lg shadow-md flex flex-col text-center items-center gap-4 animate-float-item-two">
           <div className="w-12 lg:w-14 h-12 lg:h-14 rounded-full overflow-hidden border-2 border-white shadow-md relative">
             <Image
-              src="/doc_jhon.jpg"
+              src="/assets/doc_jhon.jpg"
               alt="Doctor Avatar"
               layout="fill"
               objectFit="cover"
