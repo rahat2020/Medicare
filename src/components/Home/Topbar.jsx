@@ -68,21 +68,20 @@ const Topbar = () => {
           {/* Dropdown */}
           {item?.dropdown && (
             <div
-              className={`w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white z-10 ${
-                (item.label === "Pages" && pagesDropdownOpen) ||
-                (item.label === "Specialties" && speDropdownOpen)
+              className={`w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white z-10 ${(item.label === "Pages" && pagesDropdownOpen) ||
+                  (item.label === "Specialties" && speDropdownOpen)
                   ? "block"
                   : "hidden"
-              }`}
+                }`}
             >
               {item?.dropdown?.map((dropdownItem, idx) => <div key={idx}>
-              <Link
-                href={dropdownItem?.href}
-                className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-              >
-                {dropdownItem?.label}
-              </Link>
-              {idx < item.dropdown.length - 1 && <hr />}
+                <Link
+                  href={dropdownItem?.href}
+                  className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+                >
+                  {dropdownItem?.label}
+                </Link>
+                {idx < item.dropdown.length - 1 && <hr />}
               </div>
               )}
             </div>
@@ -93,8 +92,8 @@ const Topbar = () => {
   );
 
   return (
-    <nav className="bg-white">
-      <div className="px-4 md:px-6 lg:px-0 flex items-center justify-between text-sm md:text-[15px] py-4">
+    <nav className="bg-white ">
+      <div className="px-4 lg:px-24 flex items-center justify-between text-sm md:text-[15px] py-4">
         <div className="flex gap-4 items-center">
           {/* Mobile Menu Button */}
           <button
@@ -107,7 +106,14 @@ const Topbar = () => {
           {/* Logo */}
           <div className="">
             <Link href="/">
-              <Image width={230} height={100} quality={100} priority={true} src={'/assets/MEDICARE_HALF.png'}/>
+              <Image
+                src={'/assets/MEDICARE_HALF.png'}
+                alt="logo"
+                width={175}
+                height={80}
+                quality={100}
+                priority={true}
+              />
             </Link>
           </div>
         </div>

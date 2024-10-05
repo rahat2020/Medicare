@@ -44,6 +44,12 @@ module.exports = {
           link: '#004E92',
           light: '#E6F6FC'
         },
+        icons:{
+          facebook: '#0863F7',
+          twitter: '#1C9CEA',
+          instagram: '#F70A85',
+          linkedin: '#2464AD',
+        }, 
         white: {
           DEFAULT: '#FFF',
           light: '#FAFBFC'
