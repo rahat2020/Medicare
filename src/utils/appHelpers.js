@@ -2,6 +2,8 @@
 
 export const alterredUserAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf9DBm4up7xkDQKhfO1kvAAwU8Grk36ZywnngllVU&s';
 
+export const getCurrentYear = new Date().getFullYear();
+
 export const truncateText = (text, maxLength, ellipsis = '...') => {
     if (typeof text !== 'string' || typeof maxLength !== 'number') {
       console.error(
