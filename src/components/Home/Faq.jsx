@@ -1,5 +1,5 @@
 "use client";
-import ComponentHeader from "@/utils/UI/ComponentHeader";
+import ComponentHeader from "@/UI/ComponentHeader";
 import Image from "next/image";
 import { useState } from "react";
 import { PlusCircle, MinusCircle } from "react-feather";
