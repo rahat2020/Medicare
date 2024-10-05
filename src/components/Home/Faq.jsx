@@ -1,5 +1,5 @@
 "use client";
-import ComponentHeader from "@/utils/UI/ComponentHeader";
+import ComponentHeader from "@/UI/ComponentHeader";
 import Image from "next/image";
 import { useState } from "react";
 import { PlusCircle, MinusCircle } from "react-feather";
@@ -49,7 +49,7 @@ const Faq = () => {
       <ComponentHeader title={"Frequently Asked Questions"} desc={"Get Your Answer"}/>
       
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Image Section */}
+        {/* Faq Image Section */}
         <div className="relative">
           <Image
             src="/assets/faq.png"
