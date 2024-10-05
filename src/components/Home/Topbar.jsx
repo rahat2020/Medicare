@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { X, User, Lock, AlignRight } from "react-feather";
 import { navData } from "@/data/navData";
+import AppButton from "@/UI/AppButton";
+import Image from "next/image";
 
 const Topbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -103,8 +105,10 @@ const Topbar = () => {
           </button>
 
           {/* Logo */}
-          <div className="text-3xl font-bold text-blue-500">
-            <Link href="/">Medicare</Link>
+          <div className="">
+            <Link href="/">
+              <Image width={230} height={100} quality={100} priority={true} src={'/assets/MEDICARE_HALF.png'}/>
+            </Link>
           </div>
         </div>
 
@@ -115,18 +119,20 @@ const Topbar = () => {
 
         {/* Buttons */}
         <div className="hidden md:flex items-center space-x-2 md:space-x-4">
-          <Link
+          <AppButton
             href="/signUp"
-            className="hover:bg-blue-500 hover:text-white px-2 lg:px-4 py-1 lg:py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
+            text={'Register'}
+            icon={User}
+            customStyles={'hover:bg-blue-500 hover:text-white'}
           >
-            <User /> Register
-          </Link>
-          <Link
+          </AppButton>
+          <AppButton
             href="/login"
-            className="bg-blue-500 text-white hover:bg-white hover:text-blue-500 px-2 lg:px-4 py-1 lg:py-2 rounded-md border font-semibold flex items-center gap-2 duration-300"
+            text={'Login'}
+            icon={Lock}
+            customStyles={'bg-blue-500 text-white hover:bg-white hover:text-blue-500 border-blue-500'}
           >
-            <Lock className="font-extra-bold text-sm md:text-16" /> Login
-          </Link>
+          </AppButton>
         </div>
       </div>
 
