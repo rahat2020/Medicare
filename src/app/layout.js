@@ -1,7 +1,9 @@
 import "./globals.css";
+import dynamic from 'next/dynamic'
 import { Montserrat } from 'next/font/google';
 import Topbar from "@/components/Home/Topbar";
-import Footer from "@/components/Home/Footer";
+const Footer = dynamic(() => import('@/components/Home/Footer'), { ssr: false })
+
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
