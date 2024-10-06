@@ -72,12 +72,12 @@ const LatestArticles = () => {
             </div>
             <h3 className="text-lg font-semibold mb-2">{article.title}</h3>
             <p className="text-gray-600 mb-2">{article.description}</p>{" "}
-            {/* Changed mb-4 to mb-2 */}
-            <AppButton
+
+           <AppButton
               text={"Read More"}
               href={"#"}
               customStyles={
-                "py-2 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white mb-0" // Added mb-0 to remove bottom margin
+                "py-2 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white w-full text-center" 
               }
             ></AppButton>
           </div>
