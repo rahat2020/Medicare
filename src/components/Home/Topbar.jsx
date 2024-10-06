@@ -129,14 +129,14 @@ const Topbar = () => {
             href="/signUp"
             text={'Register'}
             icon={User}
-            customStyles={'hover:bg-blue-500 hover:text-white'}
+            customStyles={'hover:bg-blue-500 hover:text-white px-2'}
           >
           </AppButton>
           <AppButton
             href="/login"
             text={'Login'}
             icon={Lock}
-            customStyles={'bg-blue-500 text-white hover:bg-white hover:text-blue-500 border-blue-500'}
+            customStyles={'bg-blue-500 text-white hover:bg-white hover:text-blue-500 border-blue-500 px-2'}
           >
           </AppButton>
         </div>
