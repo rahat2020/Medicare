@@ -6,7 +6,7 @@ const Info = () => {
 
   return (
     <div className="bg-white py-16 px-6">
-      <div className="flex items-center justify-between gap-8">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         
         {/* Doctor Image */}
         <div className="relative w-full md:w-[40%]">
