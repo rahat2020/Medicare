@@ -28,12 +28,12 @@ const Sponsors = () => {
   }, [scrollContainerRef]);
 
   const logos = [
-    "/assets/partners-1.svg",
-    "/assets/partners-2.svg",
-    "/assets/partners-3.svg",
-    "/assets/partners-4.svg",
-    "/assets/partners-5.svg",
-    "/assets/partners-6.svg",
+    "/assets/sponsors/partners-1.svg",
+    "/assets/sponsors/partners-2.svg",
+    "/assets/sponsors/partners-3.svg",
+    "/assets/sponsors/partners-4.svg",
+    "/assets/sponsors/partners-5.svg",
+    "/assets/sponsors/partners-6.svg",
   ];
 
   return (
