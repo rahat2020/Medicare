@@ -7,6 +7,7 @@ import Info from '@/components/Home/Info';
 import LatestArticles from '@/components/Home/LatestArticles';
 import ServiceCategory from '@/components/Home/ServiceCategory';
 import Testimonials from '@/components/Home/Testimonials';
+import Sponsors from './Sponsors';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <LatestArticles />
       <ServiceCategory />
       <Testimonials />
+      <Sponsors />
     </div>
   )
 }
