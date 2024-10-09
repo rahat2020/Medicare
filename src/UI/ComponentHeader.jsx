@@ -1,8 +1,8 @@
 import React from "react";
 
-const ComponentHeader = ({title, desc}) => {
+const ComponentHeader = ({title, desc, customStyles}) => {
   return (
-    <header style={{marginBottom: "64px"}} className="text-center">
+  <header style={{marginBottom: "64px"}} className={`text-center ${customStyles}`}>
       <h2 className="text-lg font-semibold text-blue-500">
         {title}
       </h2>
