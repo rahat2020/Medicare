@@ -25,7 +25,7 @@ const Sponsors = () => {
     animationFrameId = requestAnimationFrame(scrollLogos); 
 
     return () => cancelAnimationFrame(animationFrameId); 
-  }, []);
+  }, [scrollContainerRef]);
 
   const logos = [
     "/assets/partners-1.svg",
