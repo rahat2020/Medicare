@@ -19,7 +19,7 @@ const Doctors = () => {
     <div className="py-12 px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-4">
           <ComponentHeader desc={"Best Doctors"}/>
           <div className="flex space-x-4">
             {/* Left Arrow */}
