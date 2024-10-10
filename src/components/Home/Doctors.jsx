@@ -40,7 +40,7 @@ const Doctors = () => {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {doctors.map((doctor, index) => (
-            <DoctorsCard doctor={doctor} index={index}/>
+            <DoctorsCard doctor={doctor} key={index}/>
           ))}
         </div>
       </div>
