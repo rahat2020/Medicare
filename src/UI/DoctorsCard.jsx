@@ -3,12 +3,12 @@ import React from 'react';
 
 const DoctorsCard = ({doctor}) => {
     return (
-      <div className="bg-white shadow rounded-lg p-4 min-w-[250px]">
-      <div className="relative w-full h-40 rounded-md bg-gray-200 overflow-hidden mb-4">
+      <div className="bg-white rounded-lg p-4 doc_card_style">
+      <div className="relative doc_card_img rounded-md bg-gray-200 overflow-hidden mb-4">
         <Image
           src={doctor.image}
           alt={doctor.name}
-          className="object-contain w-full h-full"
+          className="object-cover w-full h-full"
           width={500}
           height={500}
         />
@@ -21,7 +21,7 @@ const DoctorsCard = ({doctor}) => {
         <p className="text-blue-500 font-semibold">{doctor.location}</p>
         <p className="bg-gray-100 p-1 rounded-md text-sm">{doctor.price}</p>
       </div>
-      <div className="flex justify-between items-center mt-2">
+      <div className="flex justify-between items-center mt-2 ratings">
         <div className="flex items-center text-yellow-500">
           <span className="font-bold text-sm">{doctor.rating}</span>
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
