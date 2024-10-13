@@ -45,3 +45,18 @@ body {
 }
 
 
+.doc_card_style{
+  min-width: 250px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  margin: 10px 0;
+  .doc_card_img{
+    width: 100%;
+    height: 260px;
+  }
+}
+
+.ratings{
+  color: #eab308;
+  display: flex;
+  align-items: center;
+}
