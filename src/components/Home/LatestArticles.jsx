@@ -3,6 +3,7 @@ import ComponentHeader from "@/UI/ComponentHeader";
 import React, { useState } from "react";
 import { Calendar, User } from "react-feather";
 import { articles as data } from "@/data/articlesData";
+import Image from "next/image";
 
 const LatestArticles = () => {
   const [articles, setArticles] = useState(data);
@@ -11,16 +12,19 @@ const LatestArticles = () => {
     <section className="py-8">
       <ComponentHeader desc={"Latest Articles"} />
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
           <div
             key={article.id}
-            className="bg-white shadow-md rounded-lg p-2 flex flex-col"
+            className="bg-white shadow-md rounded-lg p-4 flex flex-col"
           >
-            <img
+            <Image
               src={article.imageUrl}
               alt={article.title}
-              className="rounded-md mb-2 w-full h-52 md:h-72 object-cover"
+              width={330}
+              height={100}
+              loading="lazy"
+              className="rounded-md mb-2 object-cover"
             />
             <div className="flex items-center text-gray-500 mb-2">
               <span className="mr-2 flex gap-2 items-center">

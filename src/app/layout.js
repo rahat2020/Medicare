@@ -1,9 +1,10 @@
 import "./globals.css";
+import NextTopLoader from 'nextjs-toploader';
 import dynamic from 'next/dynamic'
 import { Montserrat } from 'next/font/google';
-import Topbar from "@/components/Home/Topbar";
+import { Suspense } from "react";
 const Footer = dynamic(() => import('@/components/Home/Footer'), { ssr: false })
-
+const Topbar = dynamic(() => import("@/components/Home/Topbar"), { ssr: false })
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -22,9 +23,12 @@ export default function RootLayout({ children }) {
       <body
         className={montserrat.className}
       >
-        <Topbar/>
-        {children}
-        <Footer/>
+        <NextTopLoader color="#3B82F6" crawlSpeed={5} showSpinner={false} speed={5} />
+        <Suspense fallback={null}>
+          <Topbar />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );
