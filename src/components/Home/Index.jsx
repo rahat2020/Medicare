@@ -7,7 +7,8 @@ import Info from '@/components/Home/Info';
 import LatestArticles from '@/components/Home/LatestArticles';
 import ServiceCategory from '@/components/Home/ServiceCategory';
 import Testimonials from '@/components/Home/Testimonials';
-import Sponsors from './Sponsors';
+import Sponsors from '@/components/Home/Sponsors';
+import DoctorsCalendar from '@/components/Home/DoctorsCalendar';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Faq />
       <Info />
       <LatestArticles />
+      <DoctorsCalendar />
       <ServiceCategory />
       <Testimonials />
       <Sponsors />

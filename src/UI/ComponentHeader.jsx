@@ -1,15 +1,20 @@
-import React from "react";
 
-const ComponentHeader = ({title, desc, customStyles}) => {
+const ComponentHeader = ({
+  title,
+  desc,
+  customStyles = '',
+  titleClasses = '',
+  descClassess = ''
+}) => {
   return (
-  <header style={{marginBottom: "64px"}} className={`text-center ${customStyles}`}>
-      <h2 className="text-lg font-semibold text-blue-500">
+    <div className={`text-center ${customStyles || 'py-20'}`}>
+      <p className={`font-semibold text-blue-500  ${titleClasses || 'text-28'}`}>
         {title}
-      </h2>
-      <h3 style={{fontSize: "36px", marginBottom: "24px"}} className="font-bold">
+      </p>
+      <p className={` font-medium ${descClassess || 'text-20'}`}>
         {desc}
-      </h3>
-    </header>
+      </p>
+    </div>
   );
 };
 
