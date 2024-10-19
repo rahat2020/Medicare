@@ -7,10 +7,10 @@ const AppButton = ({ href, text, icon: Icon, customStyles, iconClasses = "" }) =
         <div>
             <Link
                 href={href}
-                className={`flex items-center justify-center px-2 md:px-6 py-1 md:py-2 rounded-md border font-semibold gap-2 duration-300 ${customStyles}`}
+                className={`flex items-center px-2 md:px-6 py-1 md:py-2 rounded-md border font-semibold duration-300 ${customStyles}`}
             >
-                <button className='text-center'>
-                    {Icon && <Icon className={iconClasses || 'w-5 h-5 text-red'} />} {text}
+                <button className='flex items-center'>
+                    {Icon && <Icon className={iconClasses || 'w-5 h-5'} />} <span className='ms-2'>{text}</span>
                 </button>
             </Link>
         </div>
