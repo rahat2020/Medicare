@@ -1,16 +1,16 @@
 import AppButton from "@/UI/AppButton";
+import Image from "next/image";
 import ComponentHeader from "@/UI/ComponentHeader";
 import React, { useState } from "react";
 import { Calendar, User } from "react-feather";
 import { articles as data } from "@/data/articlesData";
-import Image from "next/image";
 
 const LatestArticles = () => {
-  const [articles, setArticles] = useState(data);
+  const [articles] = useState(data || []);
   
   return (
     <section className="py-8">
-      <ComponentHeader desc={"Latest Articles"} />
+      <ComponentHeader title={'Latest Articles'} customStyles="py-10" />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
