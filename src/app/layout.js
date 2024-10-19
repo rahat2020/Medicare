@@ -3,8 +3,8 @@ import NextTopLoader from 'nextjs-toploader';
 import dynamic from 'next/dynamic'
 import { Montserrat } from 'next/font/google';
 import { Suspense } from "react";
+import Topbar from "@/components/Home/Topbar";
 const Footer = dynamic(() => import('@/components/Home/Footer'), { ssr: false })
-const Topbar = dynamic(() => import("@/components/Home/Topbar"), { ssr: false })
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
