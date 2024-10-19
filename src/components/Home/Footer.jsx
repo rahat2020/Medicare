@@ -1,32 +1,37 @@
 'use client'
+import useMediaQuery from "@/hooks/useMediaQuery";
 import { getCurrentYear } from "@/utils/appHelpers";
 import Image from "next/image";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Mail, Map, Phone, Twitter } from "react-feather";
 
 const Footer = () => {
+  const isMobileScreen = useMediaQuery('(max-width:768px)');
   return (
     <footer className="bg-gradient-to-r from-blue-50  text-gray-700 pt-10 pb-6 px-">
       {/* Subscription Section */}
-      <div className=" md:flex md:items-center md:justify-center px-8 md:px-40 -mt-20">
-        <div className="bg-blue-500 text-white min-w-[33.33rem] max-w-[86.66rem] py-6 px-4 rounded-2xl ">
-          <div className="flex flex-col md:flex-row justify-between gap-4 items-center space-y-4 md:space-y-0">
-            <h2 className="text-2xl font-semibold">
-              Subscribe for the Exclusive Updates!
-            </h2>
-            <div className="flex items-center space-x-2">
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                className="px-4 py-2 rounded-full text-gray-800 outline-none"
-              />
-              <button className="bg-white text-blue-500 rounded-full px-6 py-2 font-semibold hover:bg-gray-100 transition">
-                Subscribe
-              </button>
+      {
+        !isMobileScreen &&
+        <div className=" md:flex md:items-center md:justify-center px-8 md:px-40 -mt-20">
+          <div className="bg-blue-500 text-white min-w-[33.33rem] max-w-[86.66rem] py-6 px-4 rounded-2xl ">
+            <div className="flex flex-col md:flex-row justify-between gap-4 items-center space-y-4 md:space-y-0">
+              <h2 className="text-2xl font-semibold">
+                Subscribe for the Exclusive Updates!
+              </h2>
+              <div className="flex items-center space-x-2">
+                <input
+                  type="email"
+                  placeholder="Your Email Address"
+                  className="px-4 py-2 rounded-full text-gray-800 outline-none"
+                />
+                <button className="bg-white text-blue-500 rounded-full px-6 py-2 font-semibold hover:bg-gray-100 transition">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      }
 
       {/* Footer Links Section */}
       <div className="container mx-auto px-12 mt-10">
@@ -51,16 +56,16 @@ const Footer = () => {
             <p className="mb-2">Hello to: <a href="mailto:support@gmail.com" className="text-blue-500">support@gmail.com</a></p>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Facebook">
-                <Facebook className="w-5 h-5 text-icons-facebook"/>
+                <Facebook className="w-5 h-5 text-icons-facebook" />
               </Link>
               <Link href="#" aria-label="Twitter">
-                <Twitter className="w-5 h-5 text-icons-twitter"/>
+                <Twitter className="w-5 h-5 text-icons-twitter" />
               </Link>
               <Link href="#" aria-label="Instagram">
-                <Instagram className="w-5 h-5 text-icons-instagram"/>
+                <Instagram className="w-5 h-5 text-icons-instagram" />
               </Link>
               <Link href="#" aria-label="LinkedIn">
-                <Linkedin className="w-5 h-5 text-icons-linkedin"/>
+                <Linkedin className="w-5 h-5 text-icons-linkedin" />
               </Link>
             </div>
           </div>
