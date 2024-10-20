@@ -11,7 +11,7 @@ const Info = () => {
         {/* Doctor Image */}
         <div className="relative w-full md:w-[40%]">
           <Image
-            src="/assets/doc_jhon.jpg" 
+            src="/assets/work-img.png" 
             alt="Doctor"
             width={400}
             height={400}
