@@ -52,9 +52,8 @@ const Faq = () => {
         {/* Faq Image Section */}
         <div className="relative">
           <Image
-            src="/assets/faq.png"
+            src="/assets/faq-img.png"
             alt="Doctor and patient"
-            className="rounded-lg shadow-md"
             width={600}
             height={600}
           />
