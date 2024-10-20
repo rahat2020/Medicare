@@ -20,7 +20,7 @@ const Doctors = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
         <div className="flex justify-between items-center mb-4">
-          <ComponentHeader desc={"Best Doctors"}/>
+          <ComponentHeader title={"Best Doctors"}/>
           <div className="flex space-x-4">
             {/* Left Arrow */}
             <button onClick={scrollLeft} className="p-2 bg-white rounded-full shadow-md border">
