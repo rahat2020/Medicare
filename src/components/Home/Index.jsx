@@ -5,7 +5,7 @@ import Doctors from '@/components/Home/Doctors';
 import Faq from '@/components/Home/Faq';
 import Info from '@/components/Home/Info';
 import LatestArticles from '@/components/Home/LatestArticles';
-import ServiceCategory from '@/components/Home/ServiceCategory';
+import Products from '@/components/Home/Products';
 import Testimonials from '@/components/Home/Testimonials';
 import Sponsors from '@/components/Home/Sponsors';
 import DoctorsCalendar from '@/components/Home/DoctorsCalendar';
@@ -19,7 +19,7 @@ const Home = () => {
       <Info />
       <LatestArticles />
       <DoctorsCalendar />
-      <ServiceCategory />
+      <Products />
       <Testimonials />
       <Sponsors />
     </div>
