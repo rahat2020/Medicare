@@ -6,15 +6,8 @@ export const navData = [
     href: "/",
   },
   {
-    label: "Pages",
-    href: "#",
-    icon: <ChevronDown />, 
-    dropdown: [
-      { label: "About Us", href: "/about" },
-      { label: "Services", href: "/services" },
-      { label: "Service Details", href: "/serviceDetails" },
-      { label: "FAQ", href: "/faq" },
-    ],
+    label: "Products",
+    href: "/products"
   },
   {
     label: "Specialties",

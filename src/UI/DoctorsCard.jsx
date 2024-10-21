@@ -1,17 +1,52 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { Facebook, Instagram, Linkedin, Twitter } from "react-feather";
 
-const DoctorsCard = ({doctor}) => {
-    return (
-      <div className="bg-white rounded-lg p-4 doc_card_style">
-      <div className="relative doc_card_img rounded-md bg-gray-200 overflow-hidden mb-4">
+const DoctorsCard = ({ doctor }) => {
+
+  const doctorContactIcons = (
+    <>
+      <Link href="#">
+        <Facebook
+          className="text-blue-500 hover:text-white hover:bg-blue-500 absolute z-20 duration-300 -left-10 group-hover:left-3 bottom-40 bg-gray-100 shadow-lg p-2 rounded-full "
+          size={34}
+        />
+      </Link>
+      <Link href="#">
+        <Linkedin
+          className="text-blue-500 hover:text-white hover:bg-blue-500 absolute z-20 duration-300 -left-10  group-hover:left-3 bottom-[120px] bg-gray-100 shadow-lg p-2 rounded-full "
+          size={34}
+        />
+      </Link>
+      <Link href="#">
+        <Twitter
+          className="text-blue-500 hover:text-white hover:bg-blue-500 absolute z-20 duration-300 -left-10 group-hover:left-3 bottom-20 bg-gray-100 shadow-lg p-2 rounded-full "
+          size={34}
+        />
+      </Link>
+      <Link href="#">
+        <Instagram
+          className="text-blue-500 hover:text-white hover:bg-blue-500 absolute z-20 duration-300 -left-10 group-hover:left-3 bottom-10 bg-gray-100 shadow-lg p-2 rounded-full "
+          size={34}
+        />
+      </Link>
+    </>
+  );
+
+  return (
+    <div className="bg-white rounded-lg p-4 doc_card_style">
+      <div className="relative doc_card_img rounded-md group bg-gray-200 overflow-hidden mb-4 overflow-x-hidden">
         <Image
           src={doctor.image}
           alt={doctor.name}
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full group"
           width={500}
           height={500}
         />
+        {
+          doctorContactIcons
+        }
       </div>
       <div className="text-center">
         <h3 className="font-semibold text-lg">{doctor.name}</h3>
@@ -31,7 +66,7 @@ const DoctorsCard = ({doctor}) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default DoctorsCard;
