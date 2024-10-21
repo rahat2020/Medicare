@@ -12,7 +12,7 @@ const Info = () => {
         <div className="relative w-full md:w-[40%]">
           <Image
             src="/assets/work-img.png" 
-            alt="Doctor"
+            alt="Doctor image"
             width={400}
             height={400}
             className="object-cover"
