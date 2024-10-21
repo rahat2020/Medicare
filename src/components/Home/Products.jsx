@@ -4,7 +4,7 @@ import React from 'react'
 const Products = () => {
   return (
     <div className='py-12 px-8'>
-      <ComponentHeader title={"Products"} desc={"Get doctors prescribed products"} />
+      <ComponentHeader title={"Products"} desc={"Get doctors prescribed all products"} />
     </div>
   )
 }
