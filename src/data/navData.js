@@ -21,8 +21,8 @@ export const navData = [
     ],
   },
   {
-    label: "Doctors",
-    href: "/doctors",
+    label: "About Us",
+    href: "/about",
   },
   {
     label: "Blog",
@@ -30,6 +30,6 @@ export const navData = [
   },
   {
     label: "Contact Us",
-    href: "/contacts",
+    href: "/contact",
   },
 ];
