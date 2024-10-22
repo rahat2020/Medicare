@@ -1,9 +1,10 @@
+import AboutBanner from '@/components/Home/AboutBanner';
 import React from 'react';
 
 const AboutUs = () => {
     return (
         <div className='h-screen'>
-            about us
+            <AboutBanner/>
         </div>
     );
 };
