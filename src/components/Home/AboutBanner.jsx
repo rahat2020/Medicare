@@ -5,10 +5,10 @@ import { ChevronRight } from 'react-feather';
 const AboutBanner = () => {
     return (
         <section className="relative w-full bg-cover bg-center h-[600px]" style={{ backgroundImage: `url('/assets/about/about_banner.jpeg')` }}>
-            <div className="h-full bg-black bg-opacity-55 flex items-center justify-center">
+            <div className="h-full bg-blue-500 bg-opacity-45 flex items-center justify-center">
                 <div className="text-center text-white space-y-6 px-4">
                     <h1 className="text-3xl font-semibold">About us</h1>
-                    <p className="text-sm text-center text-gray-400">
+                    <p className="text-sm text-center">
                         Great doctor if you need your family member to get effective immediate assistance, <br /> emergency treatment, or a simple consultation.
                     </p>
                         <span className='bg-white text-black flex justify-center w-fit mx-auto gap-2 py-2 px-3 rounded-md text-[16px]'>
