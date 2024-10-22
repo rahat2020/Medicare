@@ -11,8 +11,8 @@ const Info = () => {
         {/* Doctor Image */}
         <div className="relative w-full md:w-[40%]">
           <Image
-            src="/assets/doc_jhon.jpg" 
-            alt="Doctor"
+            src="/assets/work-img.png" 
+            alt="Doctor image"
             width={400}
             height={400}
             className="object-cover"
