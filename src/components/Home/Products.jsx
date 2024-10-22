@@ -16,7 +16,7 @@ const Products = () => {
           ))
         }
       </div>
-      <AppButton href={"/products"} text={"View More"} customStyles={"w-fit flex justify-center mx-auto mt-12 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"}/>
+      <AppButton href={"/products"} text={"View More"} customStyles={"w-fit mx-auto mt-12 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"}/>
     </div>
   )
 }
