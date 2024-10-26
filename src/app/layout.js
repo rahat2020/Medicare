@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { Montserrat } from 'next/font/google';
 import { Suspense } from "react";
 import Topbar from "@/components/Home/Topbar";
+import GoToTop from "@/UI/GotoTop";
 const Footer = dynamic(() => import('@/components/Home/Footer'), { ssr: false })
 
 const montserrat = Montserrat({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
           <Topbar />
           {children}
+          <GoToTop/>
           <Footer />
         </Suspense>
       </body>
