@@ -40,7 +40,7 @@ const LatestArticles = () => {
               text={"Read More"}
               href={"#"}
               customStyles={
-                "py-2 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white w-full text-center"
+                "py-2 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white w-full justify-center"
               }
             ></AppButton>
           </div>
