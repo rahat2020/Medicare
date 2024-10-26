@@ -30,6 +30,6 @@ export const navData = [
   },
   {
     label: "Contact Us",
-    href: "/contact",
+    href: "/contacts",
   },
 ];
