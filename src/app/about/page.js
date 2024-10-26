@@ -1,12 +1,12 @@
-import AboutBanner from '@/components/Home/AboutBanner';
-import React from 'react';
 
-const AboutUs = () => {
+import AboutUs from '@/components/AboutUs/AboutUs';
+
+const AboutUss = () => {
     return (
         <div className='h-screen'>
-            <AboutBanner/>
+            <AboutUs/>
         </div>
     );
 };
 
-export default AboutUs;
+export default AboutUss;

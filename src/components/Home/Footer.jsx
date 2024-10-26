@@ -8,8 +8,7 @@ import { Facebook, Instagram, Linkedin, Mail, Map, Phone, Twitter } from "react-
 const Footer = () => {
   const isMobileScreen = useMediaQuery('(max-width:768px)');
   return (
-    <footer className="bg-gradient-to-r from-blue-50  text-gray-700 pt-10 pb-6 px-">
-      {/* Subscription Section */}
+    <footer className="bg-gradient-to-r from-blue-50  text-gray-700 pt-10 pb-6 mt-20">
       {
         !isMobileScreen &&
         <div className=" md:flex md:items-center md:justify-center px-8 md:px-40 -mt-20">
