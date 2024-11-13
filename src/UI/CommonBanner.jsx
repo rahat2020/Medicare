@@ -5,6 +5,7 @@ import { ChevronRight } from 'react-feather';
 const CommonBanner = ({
     customStyles = "h-[70vh]",
     title = 'About us',
+    routeName = 'About Us',
     descriptions = 'Great doctor if you need your family member to get effective immediate assistance, <br /> emergency treatment, or a simple consultation.',
 }) => {
     return (
@@ -20,7 +21,7 @@ const CommonBanner = ({
                             <h3 className='text-gray-800 font-medium hover:text-blue-500'>Medicare</h3>
                         </Link>
                         <ChevronRight />
-                        <h3 className='text-blue-500'>{title || ''}</h3>
+                        <h3 className='text-blue-500'>{routeName || ''}</h3>
                     </span>
                 </div>
             </div>

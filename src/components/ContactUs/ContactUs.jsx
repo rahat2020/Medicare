@@ -9,7 +9,8 @@ const ContactUs = () => {
     return (
         <div className="">
             <CommonBanner
-                title='Contact us'
+                title='Contact Us'
+                routeName='Contact Us'
             />
             <div className="max-w-7xl mx-auto mb-8 px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
