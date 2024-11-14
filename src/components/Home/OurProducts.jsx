@@ -4,7 +4,7 @@ import { products } from '@/data/productData'
 import ProductCard from '@/UI/ProductCard'
 import AppButton from '@/UI/AppButton'
 
-const Products = () => {
+const OurProducts = () => {
 
   return (
     <div className='py-12 px-8'>
@@ -21,4 +21,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default OurProducts
