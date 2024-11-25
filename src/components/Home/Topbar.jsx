@@ -15,12 +15,8 @@ const Topbar = () => {
     <>
       {navData.map((item, index) => (
         <div key={index} className="relative group">
-          <Link
-            href={item.href}
-            className="hover:text-blue-600 flex gap-1 items-center"
-          >
-            {item.label}{" "}
-            {item.icon && <span className="ml-1">{item.icon}</span>}
+          <Link href={item.href} className="hover:text-blue-600 flex gap-1 items-center">
+            {item.label} {item.icon && <span className="ml-1">{item.icon}</span>}
           </Link>
 
           {item.dropdown && (
@@ -46,7 +42,6 @@ const Topbar = () => {
 
   const smallDeviceLinks = (
     <>
-
       {navData?.map((item, index) => (
         <div key={index} className="relative">
           <Link
@@ -68,22 +63,24 @@ const Topbar = () => {
           {/* Dropdown */}
           {item?.dropdown && (
             <div
-              className={`w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white z-10 ${(item.label === "Pages" && pagesDropdownOpen) ||
-                  (item.label === "Specialties" && speDropdownOpen)
+              className={`w-48 left-0 top-6 mt-1 border rounded-sm transition-all duration-300 bg-white z-10 ${
+                (item.label === "Pages" && pagesDropdownOpen) ||
+                (item.label === "Specialties" && speDropdownOpen)
                   ? "block"
                   : "hidden"
-                }`}
+              }`}
             >
-              {item?.dropdown?.map((dropdownItem, idx) => <div key={idx}>
-                <Link
-                  href={dropdownItem?.href}
-                  className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
-                >
-                  {dropdownItem?.label}
-                </Link>
-                {idx < item.dropdown.length - 1 && <hr />}
-              </div>
-              )}
+              {item?.dropdown?.map((dropdownItem, idx) => (
+                <div key={idx}>
+                  <Link
+                    href={dropdownItem?.href}
+                    className="hover:text-blue-600 flex gap-1 items-center px-4 py-3 duration-300"
+                  >
+                    {dropdownItem?.label}
+                  </Link>
+                  {idx < item.dropdown.length - 1 && <hr />}
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -107,7 +104,7 @@ const Topbar = () => {
           <div className="">
             <Link href="/">
               <Image
-                src={'/assets/MEDICARE_HALF.png'}
+                src={"/assets/MEDICARE_HALF.png"}
                 alt="logo"
                 width={175}
                 height={80}
@@ -127,18 +124,18 @@ const Topbar = () => {
         <div className="hidden md:flex items-center space-x-2 md:space-x-4">
           <AppButton
             href="/signUp"
-            text={'Register'}
+            text={"Register"}
             icon={User}
-            customStyles={'hover:bg-blue-500 hover:text-white px-2'}
-          >
-          </AppButton>
+            customStyles={"hover:bg-blue-500 hover:text-white px-2"}
+          ></AppButton>
           <AppButton
             href="/login"
-            text={'Login'}
+            text={"Login"}
             icon={Lock}
-            customStyles={'bg-blue-500 text-white hover:bg-white hover:text-blue-500 border-blue-500 px-2'}
-          >
-          </AppButton>
+            customStyles={
+              "bg-blue-500 text-white hover:bg-white hover:text-blue-500 border-blue-500 px-2"
+            }
+          ></AppButton>
         </div>
       </div>
 

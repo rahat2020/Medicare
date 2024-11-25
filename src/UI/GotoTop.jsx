@@ -20,7 +20,7 @@ const GoToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
 
@@ -33,10 +33,9 @@ const GoToTop = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="flex items-center justify-center fixed bottom-5 right-5 px-4 w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 
-        transition duration-300 animate-float-item-one"
+        className="flex items-center justify-center fixed bottom-5 right-5 px-4 w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300 animate-float-item-one"
       >
-        <ArrowUp/>
+        <ArrowUp />
       </button>
     )
   );

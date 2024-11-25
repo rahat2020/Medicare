@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  console.log("🚀 ~ middleware ~ request:", request)
+  console.log("🚀 ~ middleware ~ request:", request);
   // Middleware logic here
-  return NextResponse.next()
+  return NextResponse.next();
 }

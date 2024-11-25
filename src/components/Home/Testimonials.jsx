@@ -1,23 +1,19 @@
-"use client"
+"use client";
 import ComponentHeader from "@/UI/ComponentHeader";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
 import { testimonials } from "@/data/testimonialsData";
-
+import Image from "next/image";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
   };
 
   const currentTestimonial = testimonials[currentIndex];
@@ -40,9 +36,11 @@ const Testimonials = () => {
         <div className="max-w-2xl mx-auto">
           <div className="flex flex-col items-center">
             <div className="w-32 h-32 mb-4">
-              <img
+              <Image
                 src={currentTestimonial.image}
                 alt={currentTestimonial.name}
+                width={128}
+                height={128}
                 className="w-full h-full object-cover rounded-full shadow-md"
               />
             </div>
@@ -67,7 +65,7 @@ const Testimonials = () => {
         {testimonials.map((_, idx) => (
           <div
             key={idx}
-            className={`w-3 h-3 rounded-full mx-1 ${idx === currentIndex ? 'bg-blue-500' : 'bg-gray-300'}`}
+            className={`w-3 h-3 rounded-full mx-1 ${idx === currentIndex ? "bg-blue-500" : "bg-gray-300"}`}
           />
         ))}
       </div>

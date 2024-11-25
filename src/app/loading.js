@@ -1,11 +1,9 @@
-"use client"
-import React from 'react';
-import AppSpinner from '@/UI/Appspinner';
+"use client";
+import React from "react";
+import AppSpinner from "@/UI/Appspinner";
 
 const Loading = () => {
-  return (
-    <AppSpinner/>
-  )
-}
+  return <AppSpinner />;
+};
 
-export default Loading
+export default Loading;

@@ -1,10 +1,8 @@
-import React from 'react';
-import Products from '@/components/Products/Products';
+import React from "react";
+import Products from "@/components/Products/Products";
 
 const ProductPage = () => {
-    return (
-            <Products/>
-    );
+  return <Products />;
 };
 
 export default ProductPage;

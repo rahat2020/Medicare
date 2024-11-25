@@ -8,29 +8,28 @@ const faqs = [
   {
     question: "How do I book an appointment with a doctor?",
     answer:
-      'You can book an appointment by visiting our website and selecting the "Book Appointment" option. Simply choose your preferred doctor, date, and time, and confirm your booking.',
+      'You can book an appointment by visiting our website and selecting the "Book Appointment" option. Simply choose your preferred doctor, date, and time, and confirm your booking.'
   },
   {
     question: "Can I request a specific doctor when booking my appointment?",
     answer:
-      "Yes, when booking an appointment, you can choose a specific doctor from our list of available specialists. Just make sure to check their availability on your desired date and time.",
+      "Yes, when booking an appointment, you can choose a specific doctor from our list of available specialists. Just make sure to check their availability on your desired date and time."
   },
   {
-    question:
-      "What should I do if I need to cancel or reschedule my appointment?",
+    question: "What should I do if I need to cancel or reschedule my appointment?",
     answer:
-      'If you need to cancel or reschedule, please log in to your account and navigate to the "Appointments" section. You can modify or cancel your booking up to 24 hours before the scheduled time.',
+      'If you need to cancel or reschedule, please log in to your account and navigate to the "Appointments" section. You can modify or cancel your booking up to 24 hours before the scheduled time.'
   },
   {
     question: "What if I’m running late for my appointment?",
     answer:
-      "If you are running late, please contact our support team or the clinic directly. They may be able to accommodate slight delays, but this is subject to the doctor’s availability.",
+      "If you are running late, please contact our support team or the clinic directly. They may be able to accommodate slight delays, but this is subject to the doctor’s availability."
   },
   {
     question: "Can I book appointments for family members or dependents?",
     answer:
-      "Yes, you can book appointments for your family members or dependents under your account. Simply provide their details during the booking process.",
-  },
+      "Yes, you can book appointments for your family members or dependents under your account. Simply provide their details during the booking process."
+  }
 ];
 
 const Faq = () => {
@@ -46,17 +45,12 @@ const Faq = () => {
 
   return (
     <section className="py-12">
-      <ComponentHeader title={"Frequently Asked Questions"} desc={"Get Your Answer"}/>
-      
+      <ComponentHeader title={"Frequently Asked Questions"} desc={"Get Your Answer"} />
+
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Faq Image Section */}
         <div className="relative">
-          <Image
-            src="/assets/faq-img.png"
-            alt="Doctor and patient"
-            width={600}
-            height={600}
-          />
+          <Image src="/assets/faq-img.png" alt="Doctor and patient" width={600} height={600} />
           <div className="absolute bottom-5 left-5 bg-white p-4 rounded-lg shadow-lg flex items-center">
             <span className="text-2xl">😊</span>
             <div className="ml-3">
@@ -92,7 +86,7 @@ const Faq = () => {
                 </div>
 
                 {openIndex === index && (
-                    <p className="mt-3 text-gray-600 duration-300">{faq.answer}</p>
+                  <p className="mt-3 text-gray-600 duration-300">{faq.answer}</p>
                 )}
               </div>
             ))}

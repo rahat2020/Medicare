@@ -4,7 +4,6 @@ import React from "react";
 import { Facebook, Instagram, Linkedin, Twitter } from "react-feather";
 
 const DoctorsCard = ({ doctor }) => {
-
   const doctorContactIcons = (
     <>
       <Link href="#">
@@ -44,9 +43,7 @@ const DoctorsCard = ({ doctor }) => {
           width={500}
           height={500}
         />
-        {
-          doctorContactIcons
-        }
+        {doctorContactIcons}
       </div>
       <div className="text-center">
         <h3 className="font-semibold text-lg">{doctor.name}</h3>
