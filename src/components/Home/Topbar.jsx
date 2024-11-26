@@ -90,15 +90,6 @@ const Topbar = () => {
     </>
   );
 
-  const handleCallback = (params) => {
-    const { label } = params || {};
-    setBtnLabel(label);
-    if (params?.label === "Login") {
-      setIsModalOpen((prev) => ({ ...prev, loginCompo: true }));
-    } else if (params?.label === "Dashboard") {
-      router.push("/dashboard");
-    }
-  };
   return (
     <nav className="bg-white ">
       <div className="px-4 lg:px-24 flex items-center justify-between text-sm md:text-[15px] py-4">
