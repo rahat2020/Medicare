@@ -1,11 +1,14 @@
 import { doctors } from "@/data/doctorsData";
+import AppButton from "@/UI/AppButton";
 import ComponentHeader from "@/UI/ComponentHeader";
 import DoctorsCard from "@/UI/DoctorsCard";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "react-feather";
+import { ChevronLeft, ChevronRight, ChevronsRight } from "react-feather";
 
 const Doctors = () => {
   const scrollRef = useRef(null);
+  const router = useRouter();
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
@@ -42,6 +45,16 @@ const Doctors = () => {
           {doctors.map((doctor, index) => (
             <DoctorsCard doctor={doctor} key={index} />
           ))}
+        </div>
+        <div className="flex justify-center items-center py-8">
+          <AppButton
+            text="View all doctors"
+            withoutHrefBtn
+            customStyles="justify-center hover:bg-blue-500 hover:text-white"
+            customBtnStyles="w-48 flex justify-center items-center"
+            icon={ChevronsRight}
+            callback={() => router.push("/all-doctors")}
+          />
         </div>
       </div>
     </div>
