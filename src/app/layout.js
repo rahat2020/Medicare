@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google";
 import { Suspense } from "react";
 import Topbar from "@/components/Home/Topbar";
 import GoToTop from "@/UI/GotoTop";
+import { StoreProvider } from "@/redux/StoreProvider";
 const Footer = dynamic(() => import("@/components/Home/Footer"), { ssr: false });
 
 const montserrat = Montserrat({
@@ -25,10 +26,12 @@ export default function RootLayout({ children }) {
       <body className={montserrat.className}>
         <NextTopLoader color="#3B82F6" crawlSpeed={5} showSpinner={false} speed={5} />
         <Suspense fallback={null}>
-          <Topbar />
-          {children}
-          <GoToTop />
-          <Footer />
+          <StoreProvider>
+            <Topbar />
+            {children}
+            <GoToTop />
+            <Footer />
+          </StoreProvider>
         </Suspense>
       </body>
     </html>

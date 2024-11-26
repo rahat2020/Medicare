@@ -5,12 +5,14 @@ import { X, User, Lock, AlignRight } from "react-feather";
 import { navData } from "@/data/navData";
 import AppButton from "@/UI/AppButton";
 import Image from "next/image";
+import SignInAndSignUp from "../Authentication";
 
 const Topbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [pagesDropdownOpen, setPagesDropdownOpen] = useState(false);
   const [speDropdownOpen, setSpeDropdownOpen] = useState(false);
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  console.log("ismoda", isModalOpen);
   const links = (
     <>
       {navData.map((item, index) => (
@@ -123,19 +125,21 @@ const Topbar = () => {
         {/* Buttons */}
         <div className="hidden md:flex items-center space-x-2 md:space-x-4">
           <AppButton
-            href="/signUp"
-            text={"Register"}
+            withoutHrefBtn
+            text="Register"
             icon={User}
+            callback={() => setIsModalOpen(true)}
             customStyles={"hover:bg-blue-500 hover:text-white px-2"}
-          ></AppButton>
+          />
           <AppButton
-            href="/login"
-            text={"Login"}
+            withoutHrefBtn
+            text="Login"
             icon={Lock}
+            callback={() => setIsModalOpen(true)}
             customStyles={
               "bg-blue-500 text-white hover:bg-white hover:text-blue-500 border-blue-500 px-2"
             }
-          ></AppButton>
+          />
         </div>
       </div>
 
@@ -161,6 +165,7 @@ const Topbar = () => {
           </div>
         </div>
       )}
+      {isModalOpen && <SignInAndSignUp setIsModalOpen={setIsModalOpen} />}
     </nav>
   );
 };
