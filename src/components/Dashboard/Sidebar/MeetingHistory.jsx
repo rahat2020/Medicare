@@ -1,17 +1,71 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const MeetingHistory = () => {
   // Sample meeting data
   const allMeetings = [
-    { id: 1, patient: 'Andrea Lomarco', time: '05 Jun 2023, 03:50 AM', transactionId: '#FB1234124OPF51568', paymentMethod: 'Paypal' },
-    { id: 2, patient: 'Lucas Swing', time: '02 Feb 2023, 05:50 AM', transactionId: '#FB1234124OPF515689', paymentMethod: 'Brac bank' },
-    { id: 3, patient: 'Marc Twain', time: '25 Jun 2023, 02:50 AM', transactionId: '#FB1234124OPF515', paymentMethod: 'Hand Cash' },
-    { id: 4, patient: 'Andrea Lomarco', time: '05 Jun 2023, 03:50 AM', transactionId: '#FB1234124OPF51568', paymentMethod: 'Paypal' },
-    { id: 5, patient: 'Lucas Swing', time: '02 Feb 2023, 05:50 AM', transactionId: '#FB1234124OPF515689', paymentMethod: 'Brac bank' },
-    { id: 6, patient: 'Marc Twain', time: '25 Jun 2023, 02:50 AM', transactionId: '#FB1234124OPF515', paymentMethod: 'Hand Cash' },
-    { id: 7, patient: 'Andrea Lomarco', time: '05 Jun 2023, 03:50 AM', transactionId: '#FB1234124OPF51568', paymentMethod: 'Paypal' },
-    { id: 8, patient: 'Marc Twain', time: '25 Jun 2023, 02:50 AM', transactionId: '#FB1234124OPF515', paymentMethod: 'Hand Cash' },
-    { id: 9, patient: 'Andrea Lomarco', time: '05 Jun 2023, 03:50 AM', transactionId: '#FB1234124OPF51568', paymentMethod: 'Paypal' },
+    {
+      id: 1,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 2,
+      patient: "Lucas Swing",
+      time: "02 Feb 2023, 05:50 AM",
+      transactionId: "#FB1234124OPF515689",
+      paymentMethod: "Brac bank"
+    },
+    {
+      id: 3,
+      patient: "Marc Twain",
+      time: "25 Jun 2023, 02:50 AM",
+      transactionId: "#FB1234124OPF515",
+      paymentMethod: "Hand Cash"
+    },
+    {
+      id: 4,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 5,
+      patient: "Lucas Swing",
+      time: "02 Feb 2023, 05:50 AM",
+      transactionId: "#FB1234124OPF515689",
+      paymentMethod: "Brac bank"
+    },
+    {
+      id: 6,
+      patient: "Marc Twain",
+      time: "25 Jun 2023, 02:50 AM",
+      transactionId: "#FB1234124OPF515",
+      paymentMethod: "Hand Cash"
+    },
+    {
+      id: 7,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 8,
+      patient: "Marc Twain",
+      time: "25 Jun 2023, 02:50 AM",
+      transactionId: "#FB1234124OPF515",
+      paymentMethod: "Hand Cash"
+    },
+    {
+      id: 9,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    }
   ];
 
   // State for pagination
@@ -21,10 +75,7 @@ const MeetingHistory = () => {
 
   // Paginated data
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedMeetings = allMeetings.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
+  const paginatedMeetings = allMeetings.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg max-w-5xl mx-auto">
@@ -61,8 +112,8 @@ const MeetingHistory = () => {
         <button
           className={`px-4 py-2 rounded ${
             currentPage === 1
-              ? 'bg-gray-300 text-gray-500'
-              : 'bg-blue-500 text-white hover:bg-blue-600'
+              ? "bg-gray-300 text-gray-500"
+              : "bg-blue-500 text-white hover:bg-blue-600"
           }`}
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
@@ -75,8 +126,8 @@ const MeetingHistory = () => {
             key={page}
             className={`px-4 py-2 rounded ${
               currentPage === page
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-200 text-blue-500 hover:bg-gray-300'
+                ? "bg-blue-500 text-white"
+                : "bg-gray-200 text-blue-500 hover:bg-gray-300"
             }`}
             onClick={() => setCurrentPage(page)}
           >
@@ -87,12 +138,10 @@ const MeetingHistory = () => {
         <button
           className={`px-4 py-2 rounded ${
             currentPage === totalPages
-              ? 'bg-gray-300 text-gray-500'
-              : 'bg-blue-500 text-white hover:bg-blue-600'
+              ? "bg-gray-300 text-gray-500"
+              : "bg-blue-500 text-white hover:bg-blue-600"
           }`}
-          onClick={() =>
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-          }
+          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
         >
           Next &raquo;

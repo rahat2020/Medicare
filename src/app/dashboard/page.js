@@ -1,6 +1,6 @@
-import PatientDashboard from '@/components/Dashboard/PatientDashboard';
-import CommonBanner from '@/UI/CommonBanner';
-import React from 'react';
+import PatientDashboard from "@/components/Dashboard/PatientDashboard";
+import CommonBanner from "@/UI/CommonBanner";
+import React from "react";
 
 const Dashboard = () => {
   return (
@@ -8,7 +8,7 @@ const Dashboard = () => {
       <div>
         <CommonBanner title="Dashboard" routeName="Dashboard" />
       </div>
-      <PatientDashboard/>
+      <PatientDashboard />
     </div>
   );
 };
