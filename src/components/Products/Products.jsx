@@ -1,5 +1,5 @@
-import CommonBanner from '@/UI/CommonBanner';
 import React from 'react';
+import CommonBanner from '@/UI/CommonBanner';
 
 const Products = () => {
     return (
