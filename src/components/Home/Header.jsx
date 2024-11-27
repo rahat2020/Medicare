@@ -3,15 +3,13 @@ import React from "react";
 import { ArrowRight, CheckSquare, ChevronDown, Search } from "react-feather";
 
 const Header = () => {
-
   return (
     <div className="md:h-screen px-4 md:px-6 flex flex-col md:flex-row items-center justify-between rounded-lg relative overflow-hidden ">
       {/* Left Section */}
       <div className="md:w-1/2 flex flex-col justify-center">
         <div className="space-y-6">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-            Consult <span className="text-blue-500">Best Doctors</span> Your
-            Nearby Location
+            Consult <span className="text-blue-500">Best Doctors</span> Your Nearby Location
           </h1>
           <p className="text-gray-500 text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -62,7 +60,6 @@ const Header = () => {
 
         {/* Check Up Card with Floating Animation */}
         <div className="absolute top-1/2 left-0 bg-white p-2 lg:p-4 rounded-lg border shadow-md flex items-center gap-4 animate-float-item-one">
-          
           {/* Checkbox Section */}
           <div className="flex items-center gap-2 text-blue-600">
             <CheckSquare size={20} />
@@ -123,9 +120,7 @@ const Header = () => {
               width={44}
               height={44}
             />
-            <span className="bg-blue-600 text-white p-2 rounded-full text-xs">
-              12k+
-            </span>
+            <span className="bg-blue-600 text-white p-2 rounded-full text-xs">12k+</span>
           </div>
         </div>
       </div>

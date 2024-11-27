@@ -3,7 +3,7 @@ import { ChevronDown } from "react-feather";
 export const navData = [
   {
     label: "Home",
-    href: "/",
+    href: "/"
   },
   {
     label: "Products",
@@ -12,24 +12,24 @@ export const navData = [
   {
     label: "Specialties",
     href: "#",
-    icon: <ChevronDown />, 
+    icon: <ChevronDown />,
     dropdown: [
       { label: "Cardiologist", href: "/cardiologist" },
       { label: "Neurology", href: "/neurology" },
       { label: "Ophthalmology", href: "/ophthalmology" },
-      { label: "Urology", href: "/urology" },
-    ],
+      { label: "Urology", href: "/urology" }
+    ]
   },
   {
     label: "About Us",
-    href: "/about",
+    href: "/about"
   },
   {
     label: "Blog",
-    href: "/blog",
+    href: "/blog"
   },
   {
     label: "Contact Us",
-    href: "/contacts",
-  },
+    href: "/contacts"
+  }
 ];

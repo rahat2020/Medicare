@@ -7,17 +7,14 @@ import { articles as data } from "@/data/articlesData";
 
 const LatestArticles = () => {
   const [articles] = useState(data || []);
-  
+
   return (
     <section className="py-8">
-      <ComponentHeader title={'Latest Articles'} customStyles="py-10" />
+      <ComponentHeader title={"Latest Articles"} customStyles="py-10" />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
-          <div
-            key={article.id}
-            className="bg-white shadow-md rounded-lg p-4 flex flex-col"
-          >
+          <div key={article.id} className="bg-white shadow-md rounded-lg p-4 flex flex-col">
             <Image
               src={article.imageUrl}
               alt={article.title}

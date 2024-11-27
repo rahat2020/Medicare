@@ -8,9 +8,9 @@ First, run the development server:
 # Frist, Clone the project
 git clone https://github.com/rahat2020/Medicare.git
 # Second, install the packages
-npm install 
-#or 
-yarn install 
+npm install
+#or
+yarn install
 # Third, to run the development server
 npm run dev
 # or

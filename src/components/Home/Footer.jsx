@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { getCurrentYear } from "@/utils/appHelpers";
 import Image from "next/image";
@@ -6,17 +6,14 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Mail, Map, Phone, Twitter } from "react-feather";
 
 const Footer = () => {
-  const isMobileScreen = useMediaQuery('(max-width:768px)');
+  const isMobileScreen = useMediaQuery("(max-width:768px)");
   return (
     <footer className="bg-gradient-to-r from-blue-50  text-gray-700 pt-10 pb-6 mt-20">
-      {
-        !isMobileScreen &&
+      {!isMobileScreen && (
         <div className=" md:flex md:items-center md:justify-center px-8 md:px-40 -mt-20">
           <div className="bg-blue-500 text-white min-w-[33.33rem] max-w-[86.66rem] py-6 px-4 rounded-2xl ">
             <div className="flex flex-col md:flex-row justify-between gap-4 items-center space-y-4 md:space-y-0">
-              <h2 className="text-2xl font-semibold">
-                Subscribe for the Exclusive Updates!
-              </h2>
+              <h2 className="text-2xl font-semibold">Subscribe for the Exclusive Updates!</h2>
               <div className="flex items-center space-x-2">
                 <input
                   type="email"
@@ -30,7 +27,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      }
+      )}
 
       {/* Footer Links Section */}
       <div className="container mx-auto px-12 mt-10">
@@ -40,7 +37,7 @@ const Footer = () => {
             <div className="">
               <Link href="/">
                 <Image
-                  src={'/assets/MEDICARE_HALF.png'}
+                  src={"/assets/MEDICARE_HALF.png"}
                   alt="logo"
                   width={175}
                   height={80}
@@ -52,7 +49,12 @@ const Footer = () => {
             <p className="text-gray-600 mb-4">
               There are to popular belie Lorem is Ipsum is not simply random.
             </p>
-            <p className="mb-2">Hello to: <a href="mailto:support@gmail.com" className="text-blue-500">support@gmail.com</a></p>
+            <p className="mb-2">
+              Hello to:{" "}
+              <a href="mailto:support@gmail.com" className="text-blue-500">
+                support@gmail.com
+              </a>
+            </p>
             <div className="flex space-x-4">
               <Link href="#" aria-label="Facebook">
                 <Facebook className="w-5 h-5 text-icons-facebook" />
@@ -73,11 +75,31 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-2">Company</h3>
             <ul>
-              <li><a href="#" className="hover:text-blue-800">Home</a></li>
-              <li><a href="#" className="hover:text-blue-700">About Us</a></li>
-              <li><a href="#" className="hover:text-blue-700">Our Service</a></li>
-              <li><a href="#" className="hover:text-blue-700">Our Team</a></li>
-              <li><a href="#" className="hover:text-blue-700">Contact Us</a></li>
+              <li>
+                <a href="#" className="hover:text-blue-800">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Our Service
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Contact Us
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -85,11 +107,31 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-2">Important</h3>
             <ul>
-              <li><a href="#" className="hover:text-blue-700">Our Process</a></li>
-              <li><a href="#" className="hover:text-blue-700">Appointment</a></li>
-              <li><a href="#" className="hover:text-blue-700">FAQ</a></li>
-              <li><a href="#" className="hover:text-blue-700">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-700">Terms & Conditions</a></li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Our Process
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Appointment
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Terms & Conditions
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -97,11 +139,31 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-2">Quick Link</h3>
             <ul>
-              <li><a href="#" className="hover:text-blue-700">Why Choose Us</a></li>
-              <li><a href="#" className="hover:text-blue-700">Pricing Plan</a></li>
-              <li><a href="#" className="hover:text-blue-700">News & Articles</a></li>
-              <li><a href="#" className="hover:text-blue-700">Login</a></li>
-              <li><a href="#" className="hover:text-blue-700">Subscribe</a></li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Why Choose Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Pricing Plan
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  News & Articles
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Login
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-blue-700">
+                  Subscribe
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -112,17 +174,22 @@ const Footer = () => {
               <li className="mb-1 flex items-center">
                 <span className="mr-2">
                   <Map className="w-4 h-4 text-blue-500" />
-                </span> Mirpur-12 Dahaka, Bangladesh
+                </span>{" "}
+                Mirpur-12 Dahaka, Bangladesh
               </li>
               <li className="mb-1 flex items-center">
                 <span className="mr-2">
                   <Mail className="w-4 h-4 text-blue-500" />
-                </span> <a href="mailto:company@gmail.com" className="hover:text-blue-700">medicare@gmail.com</a>
+                </span>{" "}
+                <a href="mailto:company@gmail.com" className="hover:text-blue-700">
+                  medicare@gmail.com
+                </a>
               </li>
               <li className="mb-1 flex items-center">
                 <span className="mr-2">
                   <Phone className="w-4 h-4 text-blue-500" />
-                </span> +965548547564
+                </span>{" "}
+                +965548547564
               </li>
             </ul>
           </div>
@@ -131,13 +198,19 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-300 pt-4 text-center text-sm">
           <p>&copy; {getCurrentYear} Madicare. All rights reserved.</p>
           <div className="flex justify-center space-x-4 mt-2">
-            <a href="#" className="hover:text-blue-700">Terms and conditions</a>
-            <a href="#" className="hover:text-blue-700">Cookies</a>
-            <a href="#" className="hover:text-blue-700">Privacy policy</a>
+            <a href="#" className="hover:text-blue-700">
+              Terms and conditions
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Cookies
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Privacy policy
+            </a>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
 export default Footer;

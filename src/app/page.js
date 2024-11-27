@@ -1,12 +1,12 @@
-import Home from '@/components/Home/Index'
-import React from 'react'
+import Home from "@/components/Home/Index";
+import React from "react";
 
 const main = () => {
   return (
     <div>
-      <Home/>
+      <Home />
     </div>
-  )
-}
+  );
+};
 
-export default main
+export default main;

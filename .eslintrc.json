@@ -1,3 +1,87 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": 0,
+    "no-unused-expressions": "off",
+    "rest-spread-spacing": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+    "no-whitespace-before-property": "error",
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0 }],
+    "no-multi-spaces": "error",
+    "import/prefer-default-export": "off",
+    "no-undef": "error",
+    "no-nested-ternary": "error",
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "no-var": "off",
+    "arrow-spacing": "error",
+    "no-void": "error",
+    "no-empty": "error",
+    "no-console": "off",
+    "max-params": ["error", 4],
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+    "react/react-in-jsx-scope": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react/state-in-constructor": 0,
+    "linebreak-style": 0,
+    "react/prop-types": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "no-underscore-dangle": 0,
+    "react-hooks/exhaustive-deps": 0,
+    "import/named": 0,
+    "react/destructuring-assignment": 0,
+    "camelcase": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/function-component-definition": "off",
+    // "react/function-component-definition": [
+    //   2,
+    //   {
+    //     "namedComponents": ["arrow-function", "function-declaration", "function-expression"]
+    //   }
+    // ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "none",
+        "singleQuote": false,
+        "printWidth": 100,
+        "tabWidth": 2,
+        "semi": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "react/no-unknown-property": 0
+  },
+  "plugins": ["prettier"],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  }
 }
