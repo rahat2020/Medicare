@@ -8,12 +8,7 @@ import MeetingHistory from "./SidebarItems/MeetingHistory";
 const PatientDashboard = () => {
   const [activeSection, setActiveSection] = useState("My Profile");
 
-  const sidebarOptions = [
-    "My Profile",
-    "Appointment",
-    "Meeting History",
-    "Logout"
-  ];
+  const sidebarOptions = ["My Profile", "Appointment", "Meeting History", "Logout"];
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
