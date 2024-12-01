@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Pagination from "../../../UI/Pagination";
 
 const MeetingHistory = () => {
   // Sample meeting data
@@ -65,42 +66,104 @@ const MeetingHistory = () => {
       time: "05 Jun 2023, 03:50 AM",
       transactionId: "#FB1234124OPF51568",
       paymentMethod: "Paypal"
+    },
+    {
+      id: 10,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 11,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 12,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 13,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 14,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 15,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
+    },
+    {
+      id: 16,
+      patient: "Andrea Lomarco",
+      time: "05 Jun 2023, 03:50 AM",
+      transactionId: "#FB1234124OPF51568",
+      paymentMethod: "Paypal"
     }
   ];
 
   // State for pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; // Items per page
+  const itemsPerPage = 8;
+  // Calculate paginated data
   const totalPages = Math.ceil(allMeetings.length / itemsPerPage);
+  const currentMeetings = allMeetings.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
-  // Paginated data
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedMeetings = allMeetings.slice(startIndex, startIndex + itemsPerPage);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg max-w-5xl mx-auto">
-      <h2 className="text-xl font-semibold border-b pb-4 mb-4">Meeting History</h2>
+      <h2 className="text-lg md:text-xl font-semibold mb-6 border-b-2 border-blue-500 inline-block">
+        Meeting History
+      </h2>
 
       {/* Table */}
       <div className="overflow-x-auto">
-        <table className="min-w-full border-collapse border border-gray-200 text-sm">
+        <table className="min-w-full border-collapse border border-gray-200 text-sm table-auto">
           <thead className="bg-gray-100 text-gray-700">
             <tr>
-              <th className="border px-4 py-2">SL</th>
-              <th className="border px-4 py-2">Patient</th>
-              <th className="border px-4 py-2">Time</th>
-              <th className="border px-4 py-2">Transaction ID</th>
-              <th className="border px-4 py-2">Payment Method</th>
+              <th className="border px-4 py-3 text-left">SL</th>
+              <th className="border px-4 py-3 text-left">Patient</th>
+              <th className="border px-4 py-3 text-left">Time</th>
+              <th className="border px-4 py-3 text-left">Transaction ID</th>
+              <th className="border px-4 py-3 text-left">Payment Method</th>
             </tr>
           </thead>
           <tbody>
-            {paginatedMeetings.map((meeting, index) => (
-              <tr key={meeting.id} className="text-center hover:bg-gray-50">
-                <td className="border px-4 py-2">{startIndex + index + 1}</td>
-                <td className="border px-4 py-2">{meeting.patient}</td>
-                <td className="border px-4 py-2">{meeting.time}</td>
-                <td className="border px-4 py-2">{meeting.transactionId}</td>
-                <td className="border px-4 py-2">{meeting.paymentMethod}</td>
+            {currentMeetings.map((meeting, index) => (
+              <tr key={meeting.id} className="hover:bg-gray-50">
+                <td className="border px-4 py-3 whitespace-nowrap">
+                  {(currentPage - 1) * itemsPerPage + index + 1}
+                </td>
+                <td className="border px-4 py-3 whitespace-normal break-words">
+                  {meeting.patient}
+                </td>
+                <td className="border px-4 py-3 whitespace-nowrap">{meeting.time}</td>
+                <td className="border px-4 py-3 whitespace-normal break-words">
+                  {meeting.transactionId}
+                </td>
+                <td className="border px-4 py-3 whitespace-nowrap">{meeting.paymentMethod}</td>
               </tr>
             ))}
           </tbody>
@@ -108,45 +171,11 @@ const MeetingHistory = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center items-center mt-6 space-x-2">
-        <button
-          className={`px-4 py-2 rounded ${
-            currentPage === 1
-              ? "bg-gray-300 text-gray-500"
-              : "bg-blue-500 text-white hover:bg-blue-600"
-          }`}
-          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-          disabled={currentPage === 1}
-        >
-          &laquo; Prev
-        </button>
-
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <button
-            key={page}
-            className={`px-4 py-2 rounded ${
-              currentPage === page
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-blue-500 hover:bg-gray-300"
-            }`}
-            onClick={() => setCurrentPage(page)}
-          >
-            {page}
-          </button>
-        ))}
-
-        <button
-          className={`px-4 py-2 rounded ${
-            currentPage === totalPages
-              ? "bg-gray-300 text-gray-500"
-              : "bg-blue-500 text-white hover:bg-blue-600"
-          }`}
-          onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-          disabled={currentPage === totalPages}
-        >
-          Next &raquo;
-        </button>
-      </div>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };

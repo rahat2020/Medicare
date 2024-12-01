@@ -12,9 +12,6 @@ const PatientDashboard = () => {
     "My Profile",
     "Appointment",
     "Meeting History",
-    "Transaction History",
-    "Upcoming Meeting",
-    "Message",
     "Logout"
   ];
 
