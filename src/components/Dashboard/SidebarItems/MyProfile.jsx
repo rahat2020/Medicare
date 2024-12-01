@@ -4,7 +4,9 @@ const MyProfile = () => {
   return (
     <div>
       {/* Overview Cards */}
-      <h2 className="text-xl font-semibold border-b pb-4 mb-4">Overview</h2>
+      <h2 className="text-xl font-semibold mb-6 border-b-2 border-blue-500 inline-block">
+        Overview
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           { title: "Total Appointment", value: "255", today: "15 Today" },
@@ -28,7 +30,9 @@ const MyProfile = () => {
       {/* Profile Information */}
       <div className="bg-white shadow rounded-lg p-6">
         <div className="flex justify-between items-center border-b pb-4 mb-4">
-          <h2 className="text-xl font-semibold">Profile Information</h2>
+          <h2 className="text-xl font-semibold mb-6 border-b-2 border-blue-500 inline-block">
+            Profile Information
+          </h2>
           <button className="text-blue-500 hover:underline">Edit</button>
         </div>
 

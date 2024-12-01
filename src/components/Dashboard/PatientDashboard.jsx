@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import MyProfile from "./Sidebar/MyProfile";
-import AppointmentHistory from "./Sidebar/Appointment";
-import MeetingHistory from "./Sidebar/MeetingHistory";
+import MyProfile from "./SidebarItems/MyProfile";
+import AppointmentHistory from "./SidebarItems/Appointment/AppointmentHistory";
+import MeetingHistory from "./SidebarItems/MeetingHistory";
 
 const PatientDashboard = () => {
   const [activeSection, setActiveSection] = useState("My Profile");
@@ -69,7 +69,7 @@ const PatientDashboard = () => {
               <button
                 key={idx}
                 onClick={() => handleSectionChange(option)}
-                className={`block w-full text-left px-4 py-2 rounded-md ${
+                className={`block w-full text-left px-4 py-2 rounded-md text-sm md:text-base lg:text-lg ${
                   activeSection === option
                     ? "bg-blue-500 text-white"
                     : "bg-blue-50 text-blue-600 hover:bg-blue-100"
