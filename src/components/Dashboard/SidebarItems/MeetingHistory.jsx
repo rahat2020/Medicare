@@ -1,123 +1,9 @@
+"use client";
 import { useState } from "react";
 import Pagination from "../../../UI/Pagination";
+import { allMeetings } from "@/data/meetingsHistoryData";
 
 const MeetingHistory = () => {
-  // Sample meeting data
-  const allMeetings = [
-    {
-      id: 1,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 2,
-      patient: "Lucas Swing",
-      time: "02 Feb 2023, 05:50 AM",
-      transactionId: "#FB1234124OPF515689",
-      paymentMethod: "Brac bank"
-    },
-    {
-      id: 3,
-      patient: "Marc Twain",
-      time: "25 Jun 2023, 02:50 AM",
-      transactionId: "#FB1234124OPF515",
-      paymentMethod: "Hand Cash"
-    },
-    {
-      id: 4,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 5,
-      patient: "Lucas Swing",
-      time: "02 Feb 2023, 05:50 AM",
-      transactionId: "#FB1234124OPF515689",
-      paymentMethod: "Brac bank"
-    },
-    {
-      id: 6,
-      patient: "Marc Twain",
-      time: "25 Jun 2023, 02:50 AM",
-      transactionId: "#FB1234124OPF515",
-      paymentMethod: "Hand Cash"
-    },
-    {
-      id: 7,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 8,
-      patient: "Marc Twain",
-      time: "25 Jun 2023, 02:50 AM",
-      transactionId: "#FB1234124OPF515",
-      paymentMethod: "Hand Cash"
-    },
-    {
-      id: 9,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 10,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 11,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 12,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 13,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 14,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 15,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    },
-    {
-      id: 16,
-      patient: "Andrea Lomarco",
-      time: "05 Jun 2023, 03:50 AM",
-      transactionId: "#FB1234124OPF51568",
-      paymentMethod: "Paypal"
-    }
-  ];
-
   // State for pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
@@ -145,7 +31,7 @@ const MeetingHistory = () => {
             <tr>
               <th className="border px-4 py-3 text-left">SL</th>
               <th className="border px-4 py-3 text-left">Patient</th>
-              <th className="border px-4 py-3 text-left">Time</th>
+              <th className="border px-4 py-3 text-left">Date</th>
               <th className="border px-4 py-3 text-left">Transaction ID</th>
               <th className="border px-4 py-3 text-left">Payment Method</th>
             </tr>
@@ -159,7 +45,12 @@ const MeetingHistory = () => {
                 <td className="border px-4 py-3 whitespace-normal break-words">
                   {meeting.patient}
                 </td>
-                <td className="border px-4 py-3 whitespace-nowrap">{meeting.time}</td>
+                <td className="border px-2 sm:px-4 py-4">
+                  <div className="flex flex-col items-start sm:items-center">
+                    <span className="font-medium">{meeting.date}</span>
+                    <span className="text-xs text-blue-500">{meeting.time}</span>
+                  </div>
+                </td>
                 <td className="border px-4 py-3 whitespace-normal break-words">
                   {meeting.transactionId}
                 </td>

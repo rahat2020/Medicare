@@ -1,10 +1,10 @@
-import PatientDashboard from "@/components/Dashboard/PatientDashboard";
+import MyProfile from "@/components/Dashboard/SidebarItems/MyProfile";
 import React from "react";
 
 const Dashboard = () => {
   return (
     <div>
-      <PatientDashboard />
+      <MyProfile />
     </div>
   );
 };
