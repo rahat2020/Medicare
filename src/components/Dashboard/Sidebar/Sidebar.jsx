@@ -24,8 +24,8 @@ const Sidebar = () => {
               className="rounded-full w-full h-full object-cover"
             />
           </div>
-          <div className="absolute bottom-1 right-1 bg-white hover:bg-blue-500 p-2 rounded-full shadow-md cursor-pointer transition ">
-            <Camera className="text-black hover:text-white w-4 h-4" title="Edit Profile Picture" />
+          <div className="absolute bottom-1 right-1 bg-white hover:bg-blue-500 text-black hover:text-white p-2 rounded-full shadow-md cursor-pointer transition ">
+            <Camera className="w-4 h-4" title="Edit Profile Picture" />
           </div>
         </div>
         <h2 className="mt-4 text-lg font-semibold text-gray-800">Addition Smith</h2>
@@ -41,7 +41,7 @@ const Sidebar = () => {
               <li key={label}>
                 <Link
                   href={href}
-                  className={`block w-full text-left px-4 py-2 rounded-md text-sm md:text-base lg:text-lg ${
+                  className={`block w-full text-left px-4 py-2 rounded-md text-base sm:text-xs md:text-[13] lg:text-base xl:text-lg ${
                     pathname === href
                       ? "bg-blue-500 text-white"
                       : "bg-blue-50 text-blue-600 hover:bg-blue-100"
