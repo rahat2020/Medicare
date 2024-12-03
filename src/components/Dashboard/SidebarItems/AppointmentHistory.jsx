@@ -37,8 +37,9 @@ const AppointmentHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {currentAppointments.map(
-              ({ id, doctor, specialization, date, time, chamber, status }, index) => (
+            {currentAppointments.map((appointment, index) => {
+              const { id, doctor, specialization, date, time, chamber, status } = appointment || {};
+              return (
                 <tr key={id} className="text-xs sm:text-sm hover:bg-gray-50">
                   <td className="py-4 px-2 sm:px-4 border">
                     {(currentPage - 1) * appointmentsPerPage + index + 1}
@@ -75,8 +76,8 @@ const AppointmentHistory = () => {
                     </button>
                   </td>
                 </tr>
-              )
-            )}
+              );
+            })}
           </tbody>
         </table>
       </div>

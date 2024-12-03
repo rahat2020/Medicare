@@ -37,8 +37,9 @@ const MeetingHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {currentMeetings.map(
-              ({ id, patient, date, time, transactionId, paymentMethod }, index) => (
+            {currentMeetings.map((meeting, index) => {
+              const { id, patient, date, time, transactionId, paymentMethod } = meeting || {};
+              return (
                 <tr key={id} className="hover:bg-gray-50">
                   <td className="border px-4 py-3 whitespace-nowrap">
                     {(currentPage - 1) * itemsPerPage + index + 1}
@@ -55,8 +56,8 @@ const MeetingHistory = () => {
                   </td>
                   <td className="border px-4 py-3 whitespace-nowrap">{paymentMethod}</td>
                 </tr>
-              )
-            )}
+              );
+            })}
           </tbody>
         </table>
       </div>

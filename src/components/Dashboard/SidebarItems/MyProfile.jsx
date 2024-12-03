@@ -1,5 +1,5 @@
 "use client";
-import { overviewCard, patientInfo } from "@/data/myProfileData";
+import { overviewCard, patientInfo } from "@/data/myProfileAndSidebarData";
 import React from "react";
 
 const MyProfile = () => {
@@ -10,16 +10,19 @@ const MyProfile = () => {
         Overview
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {overviewCard.map(({ title, value, today }, idx) => (
-          <div
-            key={idx}
-            className="bg-blue-500 text-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
-          >
-            <h3 className="text-lg font-semibold">{title}</h3>
-            <p className="text-3xl font-bold my-2">{value}</p>
-            <p className="text-sm">{today}</p>
-          </div>
-        ))}
+        {overviewCard.map((card, idx) => {
+          const { title, value, today } = card || {};
+          return (
+            <div
+              key={idx}
+              className="bg-blue-500 text-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+            >
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <p className="text-3xl font-bold my-2">{value}</p>
+              <p className="text-sm">{today}</p>
+            </div>
+          );
+        })}
       </div>
 
       {/* Profile Information */}
@@ -32,12 +35,15 @@ const MyProfile = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {patientInfo.map(({ label, value }, idx) => (
-            <div key={idx} className="flex flex-col">
-              <span className="text-gray-500">{label}</span>
-              <span className="font-semibold">{value}</span>
-            </div>
-          ))}
+          {patientInfo.map((info, idx) => {
+            const { label, value } = info || {};
+            return (
+              <div key={idx} className="flex flex-col">
+                <span className="text-gray-500">{label}</span>
+                <span className="font-semibold">{value}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

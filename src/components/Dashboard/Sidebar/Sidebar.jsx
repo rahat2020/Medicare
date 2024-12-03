@@ -1,18 +1,11 @@
 "use client";
+import { menuItems } from "@/data/myProfileAndSidebarData";
 import { alterredUserAvatar } from "@/utils/appHelpers";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { Camera } from "react-feather";
-
-const menuItems = [
-  { name: "My Profile", href: "/dashboard" },
-  { name: "Appointment History", href: "/appointment-history" },
-  { name: "Meeting History", href: "/meeting-history" },
-  { name: "Setting", href: "/settings" },
-  { name: "Logout", href: "" }
-];
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -42,20 +35,23 @@ const Sidebar = () => {
       {/* Menu Items */}
       <nav className="flex-1 px-4">
         <ul className="space-y-3">
-          {menuItems.map(({ name, href }) => (
-            <li key={name}>
-              <Link
-                href={href}
-                className={`block w-full text-left px-4 py-2 rounded-md text-sm md:text-base lg:text-lg ${
-                  pathname === href
-                    ? "bg-blue-500 text-white"
-                    : "bg-blue-50 text-blue-600 hover:bg-blue-100"
-                } transition`}
-              >
-                {name}
-              </Link>
-            </li>
-          ))}
+          {menuItems.map((item) => {
+            const { label, href } = item || {};
+            return (
+              <li key={label}>
+                <Link
+                  href={href}
+                  className={`block w-full text-left px-4 py-2 rounded-md text-sm md:text-base lg:text-lg ${
+                    pathname === href
+                      ? "bg-blue-500 text-white"
+                      : "bg-blue-50 text-blue-600 hover:bg-blue-100"
+                  } transition`}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>

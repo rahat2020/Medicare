@@ -16,3 +16,11 @@ export const patientInfo = [
   { label: "Age", value: "35" },
   { label: "Address", value: "2767 Sunrise Street, NY 1002, USA" }
 ];
+
+export const menuItems = [
+  { label: "My Profile", href: "/dashboard" },
+  { label: "Appointment History", href: "/appointment-history" },
+  { label: "Meeting History", href: "/meeting-history" },
+  { label: "Setting", href: "/settings" },
+  { label: "Logout", href: "" }
+];
