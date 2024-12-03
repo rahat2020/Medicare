@@ -16,7 +16,7 @@ const DoctorsCalendar = () => {
         customStyles="py-16"
         title={"Doctors Time Table"}
         desc={
-          "Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation."
+          "Great doctor for immediate assistance, emergency treatment, or a quick consultation for your family."
         }
       />
       <Calendar

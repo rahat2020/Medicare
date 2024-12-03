@@ -9,7 +9,7 @@ const LatestArticles = () => {
   const [articles] = useState(data || []);
 
   return (
-    <section className="py-8">
+    <>
       <ComponentHeader title={"Latest Articles"} customStyles="py-10" />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,7 +43,7 @@ const LatestArticles = () => {
           </div>
         ))}
       </div>
-    </section>
+    </>
   );
 };
 

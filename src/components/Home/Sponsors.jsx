@@ -37,7 +37,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <section className="py-12">
+    <div className="pb-12">
       <ComponentHeader title={"Our Partners"} />
 
       <div className="overflow-hidden mb-16 w-full">
@@ -77,7 +77,7 @@ const Sponsors = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

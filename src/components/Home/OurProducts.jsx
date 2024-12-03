@@ -6,7 +6,7 @@ import AppButton from "@/UI/AppButton";
 
 const OurProducts = () => {
   return (
-    <div className="py-12 px-8">
+    <>
       <ComponentHeader title={"Products"} desc={"Get doctors prescribed products"} />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {products?.map((product) => (
@@ -17,10 +17,10 @@ const OurProducts = () => {
         href={"/products"}
         text={"View More"}
         customStyles={
-          "w-fit mx-auto mt-12 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+          "w-fit mx-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
         }
       />
-    </div>
+    </>
   );
 };
 

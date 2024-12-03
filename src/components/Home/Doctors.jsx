@@ -19,45 +19,45 @@ const Doctors = () => {
   };
 
   return (
-    <div className="py-12 px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Heading */}
-        <div className="flex justify-between items-center mb-4">
-          <ComponentHeader title={"Best Doctors"} />
-          <div className="flex space-x-4">
-            {/* Left Arrow */}
-            <button onClick={scrollLeft} className="p-2 bg-white rounded-full shadow-md border">
-              <ChevronLeft className="w-8 h-8 text-gray-600" />
-            </button>
-            {/* Right Arrow */}
-            <button onClick={scrollRight} className="p-2 bg-white rounded-full shadow-md border">
-              <ChevronRight className="w-8 h-8 text-gray-600" />
-            </button>
-          </div>
-        </div>
-
-        {/* Horizontal Scrolling Container */}
-        <div
-          ref={scrollRef}
-          className="flex space-x-6 overflow-x-auto scrollbar-hide"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {doctors.map((doctor, index) => (
-            <DoctorsCard doctor={doctor} key={index} />
-          ))}
-        </div>
-        <div className="flex justify-center items-center py-8">
-          <AppButton
-            text="View all doctors"
-            withoutHrefBtn
-            customStyles="justify-center hover:bg-blue-500 hover:text-white"
-            customBtnStyles="w-48 flex justify-center items-center"
-            icon={ChevronsRight}
-            callback={() => router.push("/all-doctors")}
-          />
+    <div className="max-w-7xl mx-auto px-8">
+      {/* Section Heading */}
+      <div className="flex justify-between items-center mb-8">
+        <h3 className="font-semibold text-blue-500 text-28">Best Doctors</h3>
+        <div className="flex space-x-4">
+          {/* Left Arrow */}
+          <button onClick={scrollLeft} className="p-2 bg-white rounded-full shadow-md border">
+            <ChevronLeft className="w-6 h-6 text-gray-600" />
+          </button>
+          {/* Right Arrow */}
+          <button onClick={scrollRight} className="p-2 bg-white rounded-full shadow-md border">
+            <ChevronRight className="w-6 h-6 text-gray-600" />
+          </button>
         </div>
       </div>
+
+      {/* Horizontal Scrolling Container */}
+      <div
+        ref={scrollRef}
+        className="flex space-x-6 overflow-x-auto scrollbar-hide px-3"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        {doctors.map((doctor, index) => (
+          <DoctorsCard doctor={doctor} key={index} />
+        ))}
+      </div>
+      <div className="flex justify-center items-center py-8">
+        <AppButton
+          text="View all doctors"
+          withoutHrefBtn
+          customStyles={
+            "w-fit mx-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+          }
+          icon={ChevronsRight}
+          callback={() => router.push("/all-doctors")}
+        />
+      </div>
     </div>
+
   );
 };
 
