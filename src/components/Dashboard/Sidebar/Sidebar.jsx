@@ -1,4 +1,5 @@
 "use client";
+import { alterredUserAvatar } from "@/utils/appHelpers";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +11,7 @@ const menuItems = [
   { name: "Appointment History", href: "/appointment-history" },
   { name: "Meeting History", href: "/meeting-history" },
   { name: "Setting", href: "/settings" },
-  { name: "Logout", href: "/logout" }
+  { name: "Logout", href: "" }
 ];
 
 const Sidebar = () => {
@@ -23,7 +24,7 @@ const Sidebar = () => {
         <div className="relative inline-block">
           <div className="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white shadow-md">
             <Image
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fHVzZXJ8ZW58MHx8MHx8fDA%3D"
+              src={alterredUserAvatar}
               alt="Profile"
               width={96}
               height={96}
@@ -41,17 +42,17 @@ const Sidebar = () => {
       {/* Menu Items */}
       <nav className="flex-1 px-4">
         <ul className="space-y-3">
-          {menuItems.map((item) => (
-            <li key={item.name}>
+          {menuItems.map(({ name, href }) => (
+            <li key={name}>
               <Link
-                href={item.href}
+                href={href}
                 className={`block w-full text-left px-4 py-2 rounded-md text-sm md:text-base lg:text-lg ${
-                  pathname === item.href
+                  pathname === href
                     ? "bg-blue-500 text-white"
                     : "bg-blue-50 text-blue-600 hover:bg-blue-100"
                 } transition`}
               >
-                {item.name}
+                {name}
               </Link>
             </li>
           ))}

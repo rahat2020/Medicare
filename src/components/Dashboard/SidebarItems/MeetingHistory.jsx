@@ -37,26 +37,26 @@ const MeetingHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {currentMeetings.map((meeting, index) => (
-              <tr key={meeting.id} className="hover:bg-gray-50">
-                <td className="border px-4 py-3 whitespace-nowrap">
-                  {(currentPage - 1) * itemsPerPage + index + 1}
-                </td>
-                <td className="border px-4 py-3 whitespace-normal break-words">
-                  {meeting.patient}
-                </td>
-                <td className="border px-2 sm:px-4 py-4">
-                  <div className="flex flex-col items-start sm:items-center">
-                    <span className="font-medium">{meeting.date}</span>
-                    <span className="text-xs text-blue-500">{meeting.time}</span>
-                  </div>
-                </td>
-                <td className="border px-4 py-3 whitespace-normal break-words">
-                  {meeting.transactionId}
-                </td>
-                <td className="border px-4 py-3 whitespace-nowrap">{meeting.paymentMethod}</td>
-              </tr>
-            ))}
+            {currentMeetings.map(
+              ({ id, patient, date, time, transactionId, paymentMethod }, index) => (
+                <tr key={id} className="hover:bg-gray-50">
+                  <td className="border px-4 py-3 whitespace-nowrap">
+                    {(currentPage - 1) * itemsPerPage + index + 1}
+                  </td>
+                  <td className="border px-4 py-3 whitespace-normal break-words">{patient}</td>
+                  <td className="border px-2 sm:px-4 py-4">
+                    <div className="flex flex-col items-start sm:items-center">
+                      <span className="font-medium">{date}</span>
+                      <span className="text-xs text-blue-500">{time}</span>
+                    </div>
+                  </td>
+                  <td className="border px-4 py-3 whitespace-normal break-words">
+                    {transactionId}
+                  </td>
+                  <td className="border px-4 py-3 whitespace-nowrap">{paymentMethod}</td>
+                </tr>
+              )
+            )}
           </tbody>
         </table>
       </div>

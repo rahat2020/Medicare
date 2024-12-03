@@ -1,7 +1,3 @@
-import React from "react";
-
-const SettingsPage = () => {
-  return <div>Welcome to SettingsPage</div>;
-};
+const SettingsPage = () => <h1>Welcome to SettingsPage</h1>;
 
 export default SettingsPage;

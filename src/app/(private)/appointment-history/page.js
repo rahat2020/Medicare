@@ -1,12 +1,5 @@
 import AppointmentHistory from "@/components/Dashboard/SidebarItems/AppointmentHistory";
-import React from "react";
 
-const DashAppointmentHistory = () => {
-  return (
-    <div>
-      <AppointmentHistory />
-    </div>
-  );
-};
+const DashAppointmentHistory = () => <AppointmentHistory />;
 
 export default DashAppointmentHistory;

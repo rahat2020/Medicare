@@ -37,44 +37,46 @@ const AppointmentHistory = () => {
             </tr>
           </thead>
           <tbody>
-            {currentAppointments.map((appointment, index) => (
-              <tr key={appointment.id} className="text-xs sm:text-sm hover:bg-gray-50">
-                <td className="py-4 px-2 sm:px-4 border">
-                  {(currentPage - 1) * appointmentsPerPage + index + 1}
-                </td>
-                <td className="border px-2 sm:px-4 py-4">
-                  <div className="flex flex-col items-start sm:items-center">
-                    <span className="font-medium">{appointment.doctor}</span>
-                    <span className="text-[8px] md:text-xs sm:text-sm text-gray-500">
-                      {appointment.specialization}
-                    </span>
-                  </div>
-                </td>
-                <td className="border px-2 sm:px-4 py-4">
-                  <div className="flex flex-col items-start sm:items-center">
-                    <span className="font-medium">{appointment.date}</span>
-                    <span className="text-xs text-blue-500">{appointment.time}</span>
-                  </div>
-                </td>
-                <td className="border px-2 sm:px-4 py-4">{appointment.chamber}</td>
-                <td className="border px-2 sm:px-4 py-4">
-                  {appointment.status === "Complete" ? (
-                    <span className="py-1 px-3 rounded-full text-white text-xs sm:text-sm bg-green-400">
-                      {appointment.status}
-                    </span>
-                  ) : (
-                    <span className="py-1 px-3 rounded-full text-white text-xs sm:text-sm bg-blue-400">
-                      {appointment.status}
-                    </span>
-                  )}
-                </td>
-                <td className="border px-2 sm:px-4 py-4">
-                  <button className="bg-blue-100 text-blue-500 px-3 py-1 rounded-full text-xs sm:text-sm hover:bg-blue-200">
-                    Edit
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {currentAppointments.map(
+              ({ id, doctor, specialization, date, time, chamber, status }, index) => (
+                <tr key={id} className="text-xs sm:text-sm hover:bg-gray-50">
+                  <td className="py-4 px-2 sm:px-4 border">
+                    {(currentPage - 1) * appointmentsPerPage + index + 1}
+                  </td>
+                  <td className="border px-2 sm:px-4 py-4">
+                    <div className="flex flex-col items-start sm:items-center">
+                      <span className="font-medium">{doctor}</span>
+                      <span className="text-[8px] md:text-xs sm:text-sm text-gray-500">
+                        {specialization}
+                      </span>
+                    </div>
+                  </td>
+                  <td className="border px-2 sm:px-4 py-4">
+                    <div className="flex flex-col items-start sm:items-center">
+                      <span className="font-medium">{date}</span>
+                      <span className="text-xs text-blue-500">{time}</span>
+                    </div>
+                  </td>
+                  <td className="border px-2 sm:px-4 py-4">{chamber}</td>
+                  <td className="border px-2 sm:px-4 py-4">
+                    {status === "Complete" ? (
+                      <span className="py-1 px-3 rounded-full text-white text-xs sm:text-sm bg-green-400">
+                        {status}
+                      </span>
+                    ) : (
+                      <span className="py-1 px-3 rounded-full text-white text-xs sm:text-sm bg-blue-400">
+                        {status}
+                      </span>
+                    )}
+                  </td>
+                  <td className="border px-2 sm:px-4 py-4">
+                    <button className="bg-blue-100 text-blue-500 px-3 py-1 rounded-full text-xs sm:text-sm hover:bg-blue-200">
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+              )
+            )}
           </tbody>
         </table>
       </div>

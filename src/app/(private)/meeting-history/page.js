@@ -1,12 +1,5 @@
 import MeetingHistory from "@/components/Dashboard/SidebarItems/MeetingHistory";
-import React from "react";
 
-const DashMeetingHistory = () => {
-  return (
-    <div>
-      <MeetingHistory />
-    </div>
-  );
-};
+const DashMeetingHistory = () => <MeetingHistory />;
 
 export default DashMeetingHistory;
