@@ -12,7 +12,6 @@ const Topbar = () => {
   const [pagesDropdownOpen, setPagesDropdownOpen] = useState(false);
   const [speDropdownOpen, setSpeDropdownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log("ismoda", isModalOpen);
   const links = (
     <>
       {navData.map((item, index) => (
