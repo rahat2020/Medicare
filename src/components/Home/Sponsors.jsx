@@ -38,7 +38,7 @@ const Sponsors = () => {
 
   return (
     <div className="pb-12">
-      <ComponentHeader title={"Our Partners"} />
+      <ComponentHeader title={"Our Partners"} customStyles="pb-14"/>
 
       <div className="overflow-hidden mb-16 w-full">
         <div
