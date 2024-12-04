@@ -10,7 +10,7 @@ const LatestArticles = () => {
 
   return (
     <>
-      <ComponentHeader title={"Latest Articles"} customStyles="py-10" />
+      <ComponentHeader title={"Latest Articles"} desc={"Find your health solutions from our articles.t"}/>
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {articles.map((article) => (
