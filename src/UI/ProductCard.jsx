@@ -49,19 +49,19 @@ const ProductCard = ({ product }) => {
 
         {/*Product Amount Section*/}
         <div className="flex justify-center gap-3 text-18 text-white absolute -bottom-12 group-hover:bottom-3 w-full duration-300">
-          <span
+          <button
             onClick={() => setItemAmount((prev) => Math.max(0, prev - 1))}
             className="bg-blue-600 px-4 py-1 rounded-full cursor-pointer"
           >
             -
-          </span>
+          </button>
           <span className="bg-blue-600 px-6 py-1 rounded-full">{itemAmount}</span>
-          <span
+          <button
             onClick={() => setItemAmount((prev) => prev + 1)}
             className="bg-blue-600 px-4 py-1 rounded-full cursor-pointer"
           >
             +
-          </span>
+          </button>
         </div>
       </div>
       <div className="px-2">
