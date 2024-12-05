@@ -1,6 +1,5 @@
 import { doctors } from "@/data/doctorsData";
 import AppButton from "@/UI/AppButton";
-import ComponentHeader from "@/UI/ComponentHeader";
 import DoctorsCard from "@/UI/DoctorsCard";
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
@@ -57,7 +56,6 @@ const Doctors = () => {
         />
       </div>
     </div>
-
   );
 };
 

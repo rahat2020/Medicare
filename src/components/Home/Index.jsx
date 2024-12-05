@@ -12,7 +12,7 @@ import DoctorsCalendar from "@/components/Home/DoctorsCalendar";
 
 const Home = () => {
   return (
-    <div className="max-w-6xl mx-auto space-y-20">
+    <div className="max-w-6xl mx-auto space-y-24">
       <Header />
       <Doctors />
       <Faq />
