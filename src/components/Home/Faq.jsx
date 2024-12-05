@@ -44,8 +44,8 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-12">
-      <ComponentHeader title={"Frequently Asked Questions"} desc={"Get Your Answer"} />
+    <>
+      <ComponentHeader title="Frequently Asked Questions" desc="Get Your Answer" />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Faq Image Section */}
@@ -93,7 +93,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
