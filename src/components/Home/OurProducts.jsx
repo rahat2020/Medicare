@@ -1,16 +1,16 @@
-import ComponentHeader from "@/UI/ComponentHeader";
 import React from "react";
-import { products } from "@/data/productData";
-import ProductCard from "@/UI/ProductCard";
+import ComponentHeader from "@/UI/ComponentHeader";
+import { viewedProducts } from "@/data/productData";
 import AppButton from "@/UI/AppButton";
+import OurProductCard from "@/UI/OurProductCard";
 
 const OurProducts = () => {
   return (
     <div className="py-12 px-8">
       <ComponentHeader title={"Products"} desc={"Get doctors prescribed products"} />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {products?.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {viewedProducts?.map((product) => (
+          <OurProductCard key={product.id} product={product} />
         ))}
       </div>
       <AppButton
