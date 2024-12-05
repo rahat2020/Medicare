@@ -9,7 +9,7 @@ const OurProducts = () => {
     <div className="py-12 px-8">
       <ComponentHeader title={"Products"} desc={"Get doctors prescribed products"} />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {viewedProducts?.map((product) => (
+        {viewedProducts.slice(0, 4)?.map((product) => (
           <OurProductCard key={product.id} product={product} />
         ))}
       </div>
