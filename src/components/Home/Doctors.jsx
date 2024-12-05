@@ -37,7 +37,7 @@ const Doctors = () => {
       {/* Horizontal Scrolling Container */}
       <div
         ref={scrollRef}
-        className="flex space-x-6 overflow-x-auto scrollbar-hide px-3"
+        className="flex space-x-6 overflow-x-auto scrollbar-hide px-3 mb-6"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {doctors.map((doctor, index) => (
