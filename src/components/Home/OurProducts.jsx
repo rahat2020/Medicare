@@ -7,18 +7,16 @@ import AppButton from "@/UI/AppButton";
 const OurProducts = () => {
   return (
     <>
-      <ComponentHeader title={"Products"} desc={"Get doctors prescribed products"} />
+      <ComponentHeader title="Products" desc="Get doctors prescribed products" />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         {products?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
       <AppButton
-        href={"/products"}
-        text={"View More"}
-        customStyles={
-          "w-fit mx-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
-        }
+        href="/products"
+        text="View More"
+        customStyles="w-fit mx-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
       />
     </>
   );

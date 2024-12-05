@@ -48,9 +48,7 @@ const Doctors = () => {
         <AppButton
           text="View all doctors"
           withoutHrefBtn
-          customStyles={
-            "w-fit mx-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
-          }
+          customStyles="w-fit mx-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
           icon={ChevronsRight}
           callback={() => router.push("/all-doctors")}
         />

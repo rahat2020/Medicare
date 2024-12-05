@@ -45,7 +45,7 @@ const Faq = () => {
 
   return (
     <>
-      <ComponentHeader title={"Frequently Asked Questions"} desc={"Get Your Answer"} />
+      <ComponentHeader title="Frequently Asked Questions" desc="Get Your Answer" />
 
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Faq Image Section */}
