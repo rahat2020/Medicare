@@ -19,8 +19,8 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="relative bg-white py-12 md:py-24 px-4 lg:px-16 text-center">
-      <ComponentHeader title={"Testimonials"} desc={"What Our Client Says"} />
+    <div className="relative bg-white text-center">
+      <ComponentHeader title={"Testimonials"} desc={"What Our Client Says"} customStyles="pb-16" />
 
       <div className="relative flex items-center justify-center lg:justify-between">
         {/* Left Arrow */}

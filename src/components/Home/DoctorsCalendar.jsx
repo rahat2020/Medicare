@@ -12,12 +12,10 @@ const DoctorsCalendar = () => {
   return (
     <div className=" bg-white rounded-lg w-full overflow-auto h-[100%] md:pb-5">
       <ComponentHeader
-        descClassess="mt-4"
+        descClasses="mt-4"
         customStyles="py-16"
-        title={"Doctors Time Table"}
-        desc={
-          "Great doctor if you need your family member to get effective immediate assistance, emergency treatment or a simple consultation."
-        }
+        title="Doctors Time Table"
+        desc="Great doctor for immediate assistance, emergency treatment, or a quick consultation for your family."
       />
       <Calendar
         localizer={localizer}
