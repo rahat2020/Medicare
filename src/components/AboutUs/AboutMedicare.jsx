@@ -47,23 +47,23 @@ export default function AboutMedicare() {
         </div>
 
         {/* Right Section*/}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 space-y-5">
           <ComponentHeader title={"About Medicare"} titleClasses="text-start text-20" />
-          <h2 className="text-3xl font-bold text-gray-800 mt-4">
+          <h2 className="text-3xl font-bold text-gray-800">
             Good Services And Better Health By Our Specialists
           </h2>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600">
             Great doctor if you need your family member to get effective immediate assistance,
             emergency treatment, or a simple consultation.
           </p>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600">
             The most well-known dummy text is the &apos;Lorem Ipsum&apos;, which is said to have
             originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language.
           </p>
           <AppButton
             text={"Read More"}
             customStyles={
-              "w-fit border-blue-200 bg-blue-200 shadow-md shadow-blue-200 font-semibold text-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer"
+              "w-fit border-blue-200 bg-blue-200 shadow-md shadow-blue-200 font-[500] text-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer"
             }
           />
         </div>
