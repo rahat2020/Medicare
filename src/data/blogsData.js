@@ -1,3 +1,17 @@
+export const categoryColorMap = {
+  Doctor: "bg-pink-700 text-white",
+  Medical: "bg-green-700 text-white",
+  Hospital: "bg-blue-700 text-white",
+  Technology: "bg-red-700 text-white",
+  Healthcare: "bg-purple-700 text-white",
+  Lifestyle: "bg-yellow-700 text-white",
+  Wellness: "bg-orange-700 text-white",
+  Science: "bg-cyan-700 text-white",
+  Research: "bg-gray-700 text-white",
+  Innovation: "bg-teal-700 text-white",
+  Pediatrics: "bg-indigo-700 text-white",
+  Neurology: "bg-lime-700 text-white"
+};
 export const blogs = [
   {
     id: 1,
