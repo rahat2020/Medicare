@@ -26,7 +26,7 @@ export const navData = [
   },
   {
     label: "Blogs",
-    href: "/blogs"
+    href: "/blog"
   },
   {
     label: "Contact Us",
