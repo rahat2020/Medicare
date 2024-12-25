@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Pagination from "@/UI/Pagination";
 import Image from "next/image";
 import { User, Calendar, MessageCircle, Heart, Share2 } from "react-feather";
-import { blogs } from "@/data/blogsData";
+import { blogs, categoryColorMap } from "@/data/blogsData";
 import CommonBanner from "@/UI/CommonBanner";
 
 const BlogPage = () => {
@@ -26,7 +26,6 @@ const BlogPage = () => {
             ({
               id,
               category,
-              categoryColors,
               title,
               date,
               description,
@@ -35,65 +34,67 @@ const BlogPage = () => {
               likes,
               shares,
               image
-            }) => (
-              <div
-                key={id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="relative">
-                  <Image
-                    src={image}
-                    alt={title}
-                    width={500}
-                    height={224}
-                    className="w-full h-56 object-cover transition-transform duration-300 hover:scale-110"
-                    priority
-                  />
-                  <span
-                    className={`absolute top-4 left-4 px-3 py-1 text-sm font-semibold rounded-full ${
-                      categoryColors || "bg-gray-100 text-gray-700"
-                    }`}
-                  >
-                    {category}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <div className="flex gap-3 text-gray-600 text-sm mb-3">
-                    <div className="flex items-center space-x-1">
-                      <User size={16} className="text-blue-600" />
-                      <span>{author}</span>
+            }) => {
+              return (
+                <div
+                  key={id}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="relative">
+                    <Image
+                      src={image}
+                      alt={title}
+                      width={500}
+                      height={224}
+                      className="w-full h-56 object-cover transition-transform duration-300 hover:scale-110"
+                      priority
+                    />
+                    <span
+                      className={`absolute top-4 left-4 px-3 py-1 text-sm font-semibold rounded-full ${
+                        categoryColorMap[category] || "bg-white text-black"
+                      }`}
+                    >
+                      {category}
+                    </span>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex gap-3 text-gray-600 text-sm mb-3">
+                      <div className="flex items-center space-x-1">
+                        <User size={16} className="text-blue-600" />
+                        <span>{author}</span>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <Calendar size={16} className="text-blue-600" />
+                        <span>{date}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-1">
-                      <Calendar size={16} className="text-blue-600" />
-                      <span>{date}</span>
+                    <h2 className="text-lg font-bold text-gray-800 transition-colors hover:text-blue-500">
+                      {title}
+                    </h2>
+                    <p className="text-gray-500 text-sm mt-3 leading-relaxed">{description}</p>
+                    <div className="flex items-center justify-between mt-5 text-gray-800 text-sm">
+                      <button className="transition-colors hover:text-blue-500 font-semibold">
+                        Read More →
+                      </button>
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-1">
+                          <MessageCircle size={16} />
+                          <span>{comments}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Heart size={16} />
+                          <span>{likes}</span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <Share2 size={16} />
+                          <span>{shares}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <h2 className="text-lg font-bold text-gray-800 transition-colors hover:text-blue-500">
-                    {title}
-                  </h2>
-                  <p className="text-gray-500 text-sm mt-3 leading-relaxed">{description}</p>
-                  <div className="flex items-center justify-between mt-5 text-gray-800 text-sm">
-                    <button className="transition-colors hover:text-blue-500 font-semibold">
-                      Read More →
-                    </button>
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-1">
-                        <MessageCircle size={16} />
-                        <span>{comments}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Heart size={16} />
-                        <span>{likes}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Share2 size={16} />
-                        <span>{shares}</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            )
+              );
+            }
           )}
         </div>
         <Pagination
