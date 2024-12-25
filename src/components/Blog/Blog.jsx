@@ -6,6 +6,7 @@ import Image from "next/image";
 import { User, Calendar, MessageCircle, Heart, Share2 } from "react-feather";
 import { blogs, categoryColorMap } from "@/data/blogsData";
 import CommonBanner from "@/UI/CommonBanner";
+import Link from "next/link";
 
 const BlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -74,7 +75,7 @@ const BlogPage = () => {
                     <p className="text-gray-500 text-sm mt-3 leading-relaxed">{description}</p>
                     <div className="flex items-center justify-between mt-5 text-gray-800 text-sm">
                       <button className="transition-colors hover:text-blue-500 font-semibold">
-                        Read More →
+                        <Link href={`/blogs/${id}`}>Read More →</Link>
                       </button>
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
