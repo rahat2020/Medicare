@@ -6,6 +6,7 @@ import Image from "next/image";
 import { User, Calendar, MessageCircle, Heart, Share2 } from "react-feather";
 import { blogs, categoryColorMap } from "@/data/blogsData";
 import CommonBanner from "@/UI/CommonBanner";
+import Link from "next/link";
 
 const BlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,7 +39,7 @@ const BlogPage = () => {
               return (
                 <div
                   key={id}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
                 >
                   <div className="relative">
                     <Image
@@ -51,13 +52,13 @@ const BlogPage = () => {
                     />
                     <span
                       className={`absolute top-4 left-4 px-3 py-1 text-sm font-semibold rounded-full ${
-                        categoryColorMap[category] || "bg-white text-black"
+                        categoryColorMap[category] || "bg-black text-white"
                       }`}
                     >
                       {category}
                     </span>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-1">
                     <div className="flex gap-3 text-gray-600 text-sm mb-3">
                       <div className="flex items-center space-x-1">
                         <User size={16} className="text-blue-600" />
@@ -71,11 +72,16 @@ const BlogPage = () => {
                     <h2 className="text-lg font-bold text-gray-800 transition-colors hover:text-blue-500">
                       {title}
                     </h2>
-                    <p className="text-gray-500 text-sm mt-3 leading-relaxed">{description}</p>
+                    <p className="text-gray-500 text-sm mt-3 leading-relaxed flex-1">
+                      {description}
+                    </p>
                     <div className="flex items-center justify-between mt-5 text-gray-800 text-sm">
-                      <button className="transition-colors hover:text-blue-500 font-semibold">
+                      <Link
+                        href={`/blogs/${id}`}
+                        className="transition-colors hover:text-blue-500 font-semibold"
+                      >
                         Read More →
-                      </button>
+                      </Link>
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
                           <MessageCircle size={16} />
