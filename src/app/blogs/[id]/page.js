@@ -1,4 +1,4 @@
-import BlogDetailsPage from "@/components/Blog/BlogDetails/BlogDetailsPage";
+import BlogDetailsPage from "@/components/BlogDetails/BlogDetailsPage";
 
 const BlogDetails = ({ params }) => <BlogDetailsPage params={params} />;
 
