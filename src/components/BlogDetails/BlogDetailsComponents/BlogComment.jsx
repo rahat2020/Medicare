@@ -43,7 +43,7 @@ const CommentSection = () => {
   ];
 
   return (
-    <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+    <div className="max-w-5xl mx-auto bg-white shadow-md rounded-lg p-6">
       <h2 className="text-2xl font-semibold mb-6">
         Total Comment ({comments.length.toString().padStart(2, "0")})
       </h2>

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 
 const BlogCommentForm = () => {
@@ -12,43 +13,44 @@ const BlogCommentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", form);
-    // Add your form submission logic here
     setForm({ name: "", email: "", comment: "" });
   };
 
   return (
-    <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <h2 className="text-2xl font-semibold mb-4">Leave A Comment</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex gap-4">
+    <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+      <h2 className="text-2xl font-semibold mb-6 text-gray-800">Leave a Comment</h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="flex flex-wrap gap-4">
           <input
             type="text"
             name="name"
-            placeholder="Name..."
+            placeholder="Your Name"
             value={form.name}
             onChange={handleChange}
-            className="w-1/2 p-3 border bg-gray-100 placeholder:text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 min-w-[240px] p-3 border bg-gray-50 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="email"
             name="email"
-            placeholder="Email..."
+            placeholder="Your Email"
             value={form.email}
             onChange={handleChange}
-            className="w-1/2 p-3 border bg-gray-100 placeholder:text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 min-w-[240px] p-3 border bg-gray-50 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
+
         <textarea
           name="comment"
-          placeholder="Write A Comment..."
+          placeholder="Write your comment here..."
           value={form.comment}
           onChange={handleChange}
-          className="w-full p-3 border bg-gray-100 placeholder:text-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows="4"
+          className="w-full p-3 border bg-gray-50 placeholder-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          rows="5"
         ></textarea>
+
         <button
           type="submit"
-          className="w-1/4 rounded-full bg-blue-500 text-white py-3 hover:bg-blue-600 transition"
+          className="w-full md:w-1/3 rounded-full bg-blue-500 text-white py-3 font-semibold hover:bg-blue-600 transition-all duration-300"
         >
           Submit Now
         </button>
