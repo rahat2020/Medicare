@@ -1,5 +1,5 @@
 import BlogPage from "@/components/Blogs";
 
-const Blog = () => <BlogPage />;
+const Blogs = () => <BlogPage />;
 
-export default Blog;
+export default Blogs;
