@@ -8,21 +8,6 @@ import { blogs } from "@/data/blogsData";
 import CommonBanner from "@/UI/CommonBanner";
 import Link from "next/link";
 
-const categoryColorMap = {
-  Doctor: "bg-pink-700 text-white",
-  Medical: "bg-green-700 text-white",
-  Hospital: "bg-blue-700 text-white",
-  Technology: "bg-red-700 text-white",
-  Healthcare: "bg-purple-700 text-white",
-  Lifestyle: "bg-yellow-700 text-white",
-  Wellness: "bg-orange-700 text-white",
-  Science: "bg-cyan-700 text-white",
-  Research: "bg-gray-700 text-white",
-  Innovation: "bg-teal-700 text-white",
-  Pediatrics: "bg-indigo-700 text-white",
-  Neurology: "bg-lime-700 text-white"
-};
-
 const BlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
@@ -49,7 +34,8 @@ const BlogPage = () => {
               comments,
               likes,
               shares,
-              image
+              image,
+              color
             }) => {
               return (
                 <div
@@ -66,9 +52,7 @@ const BlogPage = () => {
                       priority
                     />
                     <span
-                      className={`absolute top-4 left-4 px-3 py-1 text-sm font-semibold rounded-full ${
-                        categoryColorMap[category] || "bg-black text-white"
-                      }`}
+                      className={`absolute top-4 left-4 px-3 py-1 text-sm font-semibold rounded-full ${color}`}
                     >
                       {category}
                     </span>
@@ -99,13 +83,14 @@ const BlogPage = () => {
                       </Link>
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
-                          <MessageCircle size={16} />
-                          <span>{comments}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
                           <Heart size={16} />
                           <span>{likes}</span>
                         </div>
+                        <div className="flex items-center space-x-1">
+                          <MessageCircle size={16} />
+                          <span>{comments}</span>
+                        </div>
+
                         <div className="flex items-center space-x-1">
                           <Share2 size={16} />
                           <span>{shares}</span>

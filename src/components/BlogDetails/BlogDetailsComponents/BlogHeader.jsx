@@ -14,14 +14,19 @@ import BlogContent from "./BlogContent";
 
 const BlogHeader = ({
   category,
+  color,
   title,
-  author,
   date,
+  author,
+  comments,
   likes,
   shares,
   image,
-  categoryColorMap,
-  comments
+  paragraph1,
+  paragraph2,
+  paragraph3,
+  quote,
+  points
 }) => {
   return (
     <header className="max-w-5xl mx-auto bg-white shadow p-6 rounded-lg">
@@ -36,11 +41,7 @@ const BlogHeader = ({
 
       <div className="flex flex-col md:flex-row md:items-center justify-between text-sm text-gray-500 mb-4 gap-4">
         <div className="flex flex-wrap items-center gap-4">
-          <span
-            className={`px-3 py-1 text-sm font-semibold rounded-full ${
-              categoryColorMap[category] || "bg-black text-white"
-            }`}
-          >
+          <span className={`px-3 py-1 text-sm font-semibold rounded-full ${color}`}>
             {category}
           </span>
           <div className="flex items-center gap-2">
@@ -55,12 +56,12 @@ const BlogHeader = ({
 
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
-            <MessageCircle size={16} />
-            <span>{comments}</span>
-          </div>
-          <div className="flex items-center gap-1">
             <Heart size={16} />
             <span>{likes}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <MessageCircle size={16} />
+            <span>{comments}</span>
           </div>
           <div className="flex items-center gap-1">
             <Share2 size={16} />
@@ -75,6 +76,11 @@ const BlogHeader = ({
         Facebook={Facebook}
         Twitter={Twitter}
         Instagram={Instagram}
+        paragraph1={paragraph1}
+        paragraph2={paragraph2}
+        paragraph3={paragraph3}
+        quote={quote}
+        points={points}
       />
     </header>
   );

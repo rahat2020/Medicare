@@ -1,47 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { alterredUserAvatar } from "@/utils/appHelpers";
+import { comments } from "@/data/blogsData";
 
 const CommentSection = () => {
-  const comments = [
-    {
-      id: 1,
-      name: "Robert Smith",
-      avatar: "/avatar1.png",
-      time: "4 Hour Ago",
-      comment:
-        "But the majority have suffered alteration in some form, by injected humour, or randomised its words look even slightly believable.",
-      replies: [
-        {
-          id: 11,
-          name: "Steven Smith",
-          avatar: "/avatar2.png",
-          time: "1 Hour Ago",
-          comment:
-            "But the majority have suffered alteration in some form, by injected humour, or randomised its words look even slightly believable."
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: "Deni Rover",
-      avatar: "/avatar3.png",
-      time: "6 Hour Ago",
-      comment:
-        "But the majority have suffered alteration in some form, by injected humour, or randomised its words look even slightly believable.",
-      replies: []
-    },
-    {
-      id: 3,
-      name: "Robert Smith",
-      avatar: "/avatar1.png",
-      time: "4 Hour Ago",
-      comment:
-        "But the majority have suffered alteration in some form, by injected humour, or randomised its words look even slightly believable.",
-      replies: []
-    }
-  ];
-
   return (
     <div className="max-w-5xl mx-auto bg-white shadow-md rounded-lg p-6">
       <h2 className="text-2xl font-semibold mb-6">
@@ -52,7 +13,7 @@ const CommentSection = () => {
           {/* Parent Comment */}
           <div className="flex items-start gap-4">
             <Image
-              src={alterredUserAvatar}
+              src={comment.avatar}
               alt={`${comment.name}'s avatar`}
               width={48}
               height={48}
@@ -76,7 +37,7 @@ const CommentSection = () => {
               {comment.replies.map((reply) => (
                 <div key={reply.id} className="flex items-start gap-4">
                   <Image
-                    src={alterredUserAvatar}
+                    src={comment.avatar}
                     alt={`${reply.name}'s avatar`}
                     width={40}
                     height={40}

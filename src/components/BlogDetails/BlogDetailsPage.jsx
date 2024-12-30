@@ -1,5 +1,5 @@
 import React from "react";
-import { blogs, categoryColorMap } from "@/data/blogsData";
+import { blogs } from "@/data/blogsData";
 import BlogHeader from "./BlogDetailsComponents/BlogHeader";
 import BlogComment from "./BlogDetailsComponents/BlogComment";
 import BlogCommentForm from "./BlogDetailsComponents/BlogCommentForm";
@@ -18,7 +18,22 @@ const BlogDetailsPage = ({ params }) => {
     );
   }
 
-  const { category, title, date, description, author, comments, likes, shares, image } = blog;
+  const {
+    category,
+    color,
+    title,
+    date,
+    author,
+    comments,
+    likes,
+    shares,
+    image,
+    paragraph1,
+    paragraph2,
+    paragraph3,
+    quote,
+    points
+  } = blog;
 
   return (
     <div className="container mx-auto p-4">
@@ -26,15 +41,19 @@ const BlogDetailsPage = ({ params }) => {
         <div className="w-full lg:w-3/4">
           <BlogHeader
             category={category}
+            color={color}
             image={image}
-            categoryColorMap={categoryColorMap}
             title={title}
             author={author}
             date={date}
             likes={likes}
             shares={shares}
             comments={comments}
-            description={description}
+            paragraph1={paragraph1}
+            paragraph2={paragraph2}
+            paragraph3={paragraph3}
+            quote={quote}
+            points={points}
           />
           <div className="mt-8">
             <BlogComment />
