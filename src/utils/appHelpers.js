@@ -19,6 +19,14 @@ export const truncateText = (text, maxLength, ellipsis = "...") => {
   return text.substring(0, charsToShow) + ellipsis;
 };
 
+export const checkEmailForValid = (value) => {
+  const regex = /^[\w%\+\-]+(\.[\w%\+\-]+)*@[\w%\+\-]+(\.[\w%\+\-]+)+$/;
+  return regex.test(value);
+};
+
+export const convertNumToPad = (value = 0) =>
+  value === 0 ? 0 : value?.toString().padStart(2, "0");
+
 export const formatDate = (dateString) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   return new Date(dateString).toLocaleDateString(undefined, options);
