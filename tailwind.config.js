@@ -6,6 +6,21 @@ module.exports = {
     "./src/UI/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
   ],
+  safelist: [
+    "bg-pink-700",
+    "text-white",
+    "bg-green-700",
+    "bg-blue-700",
+    "bg-red-700",
+    "bg-purple-700",
+    "bg-yellow-700",
+    "bg-orange-700",
+    "bg-cyan-700",
+    "bg-gray-700",
+    "bg-teal-700",
+    "bg-indigo-700",
+    "bg-lime-700"
+  ],
   theme: {
     fontFamily: {
       montserrat: ["var(--font-montserrat)"]

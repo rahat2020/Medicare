@@ -1,20 +1,9 @@
 "use client";
 
+import { tags } from "@/data/blogsData";
 import React from "react";
 
 const PostTags = () => {
-  const tags = [
-    "Appointment",
-    "Doctors",
-    "Health",
-    "Best",
-    "Hospital",
-    "Laboratory",
-    "Antibiotics",
-    "COVID-19",
-    "Care"
-  ];
-
   return (
     <div className="bg-white p-4 shadow rounded-lg">
       <h3 className="text-lg font-bold text-gray-800 border-b-2 border-blue-500 inline-block pb-1 mb-4">

@@ -1,33 +1,25 @@
 import Image from "next/image";
-import {
-  User,
-  Calendar,
-  MessageCircle,
-  Heart,
-  Share2,
-  CheckCircle,
-  Facebook,
-  Twitter,
-  Instagram
-} from "react-feather";
+import { User, Calendar, MessageCircle, Heart, Share2 } from "react-feather";
 import BlogContent from "./BlogContent";
 
-const BlogHeader = ({
-  category,
-  color,
-  title,
-  date,
-  author,
-  comments,
-  likes,
-  shares,
-  image,
-  paragraph1,
-  paragraph2,
-  paragraph3,
-  quote,
-  points
-}) => {
+const BlogHeader = ({ content }) => {
+  const {
+    title,
+    category,
+    color,
+    image,
+    date,
+    author,
+    comments,
+    likes,
+    shares,
+    paragraph1,
+    paragraph2,
+    paragraph3,
+    quote,
+    points
+  } = content;
+
   return (
     <header className="max-w-5xl mx-auto bg-white shadow p-6 rounded-lg">
       <Image
@@ -41,7 +33,9 @@ const BlogHeader = ({
 
       <div className="flex flex-col md:flex-row md:items-center justify-between text-sm text-gray-500 mb-4 gap-4">
         <div className="flex flex-wrap items-center gap-4">
-          <span className={`px-3 py-1 text-sm font-semibold rounded-full ${color}`}>
+          <span
+            className={`px-3 py-1 text-sm font-semibold rounded-full ${color || "bg-black text-white"}`}
+          >
             {category}
           </span>
           <div className="flex items-center gap-2">
@@ -70,18 +64,7 @@ const BlogHeader = ({
         </div>
       </div>
 
-      <BlogContent
-        title={title}
-        CheckCircle={CheckCircle}
-        Facebook={Facebook}
-        Twitter={Twitter}
-        Instagram={Instagram}
-        paragraph1={paragraph1}
-        paragraph2={paragraph2}
-        paragraph3={paragraph3}
-        quote={quote}
-        points={points}
-      />
+      <BlogContent content={{ title, paragraph1, paragraph2, paragraph3, quote, points }} />
     </header>
   );
 };
