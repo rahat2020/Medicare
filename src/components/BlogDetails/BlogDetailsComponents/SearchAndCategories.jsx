@@ -2,8 +2,8 @@
 
 import { categories } from "@/data/blogsData";
 import ArrowIcon from "@/UI/customSVG/ArrowIcon";
-import SearchIcon from "@/UI/customSVG/SearchIcon";
 import React from "react";
+import { Search } from "react-feather";
 
 const SearchAndCategories = () => {
   return (
@@ -21,7 +21,7 @@ const SearchAndCategories = () => {
             type="submit"
             className="absolute right-2 top-2 text-blue-600 hover:text-blue-800"
           >
-            <SearchIcon />
+            <Search />
           </button>
         </div>
       </div>
